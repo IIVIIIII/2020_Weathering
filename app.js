@@ -1,5 +1,5 @@
 city = ''
-state = ''
+state = 'Missouri'
 
 states ={ 
   "Alabama": "01",
@@ -55,6 +55,10 @@ states ={
   "Wyoming": "56",
   "Puerto Rico": "72"
 }
+
+state = states[state]
+
+console.log(state)
 
 d3.csv("resources/ccvi.csv").then(function(data) {
 
