@@ -57,15 +57,24 @@ states ={
 }
 
 city = city.concat(' city')
-state = states[state]
+stateNum = states[state]
+fullCity = city.concat(`, ${state}`)
 
-console.log(city)
-console.log(state)
+// console.log(fullCity)
+// console.log(state)
 
 d3.csv("resources/ccvi.csv").then(function(data) {
 
-  console.log(data);
+  // console.log(data);
 
-}).catch(function(error) {
-  console.log(error);
+  d3.json(`https://api.census.gov/data/2019/acs/acs5?get=NAME&for=place:*&in=state:${stateNum}`).then(function(cities) {
+    cities.forEach(c => {
+      if (c[0] == city.concat(`, ${state}`)) {city = (c[2])}
+    })
+
+    console.log(city)
+  })
+
+// }).catch(function(error) {
+//   console.log(error);
 });
