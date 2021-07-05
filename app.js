@@ -61,7 +61,7 @@ stateNum = states[state]
 fullCity = city.concat(`, ${state}`)
 countyNums = []
 countyQuery = ''
-tractNums = []
+tracts = []
 
 // console.log(fullCity)
 // console.log(state)
@@ -84,13 +84,13 @@ d3.csv("resources/ccvi.csv").then(function(data) {
           else {countyQuery = countyQuery.concat(`,${co}`)}
         })
       
-      d3.json(`https://api.census.gov/data/2019/acs/acs5?get=NAME&for=tract:*&in=county:${countyQuery}&in=state:${stateNum}`).then(function(tracts) {
-        tracts.forEach(t => {
-          if (t[0] != 'NAME') {tractNums.push({tract: t[1].concat(t[2],t[3])})}
+      d3.json(`https://api.census.gov/data/2019/acs/acs5?get=NAME&for=tract:*&in=county:${countyQuery}&in=state:${stateNum}`).then(function(cenTracts) {
+        cenTracts.forEach(t => {
+          if (t[0] != 'NAME') {tracts.push({tract: t[1].concat(t[2],t[3])})}
         })
-        console.log(tractNums)
+        console.log(tracts)
 
-        
+
 
       })
     })
