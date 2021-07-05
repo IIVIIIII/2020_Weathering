@@ -86,12 +86,22 @@ d3.csv("resources/ccvi.csv").then(function(data) {
       
       d3.json(`https://api.census.gov/data/2019/acs/acs5?get=NAME&for=tract:*&in=county:${countyQuery}&in=state:${stateNum}`).then(function(cenTracts) {
         cenTracts.forEach(t => {
-          if (t[0] != 'NAME') {tracts.push({tract: t[1].concat(t[2],t[3])})}
+          if (t[0] != 'NAME') {
+
+
+            tracts.push(
+              {
+                tract: data.filter(d => {return d.FIPS == t[1].concat(t[2],t[3])})[0].FIPS,
+                ccvi: parseFloat(data.filter(d => {return d.FIPS == t[1].concat(t[2],t[3])})[0].ccvi)
+              
+              })
+          
+          }
         })
 
-        tracts.forEach(t => {
-          t.ccvi = parseFloat(data.filter(d => {return d.FIPS == t.tract})[0].ccvi)
-        })
+        // tracts.forEach(t => {
+        //   t.ccvi = parseFloat(data.filter(d => {return d.FIPS == t.tract})[0].ccvi)
+        // })
 
         console.log(tracts)
 
