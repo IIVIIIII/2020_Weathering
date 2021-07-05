@@ -62,6 +62,7 @@ fullCity = city.concat(`, ${state}`)
 countyNums = []
 countyQuery = ''
 tracts = []
+demogs = 'B02001_002E,B02001_003E,B02001_004E,B02001_005E,B02001_006E,B03001_003E'
 
 // console.log(fullCity)
 // console.log(state)
@@ -84,26 +85,28 @@ d3.csv("resources/ccvi.csv").then(function(data) {
           else {countyQuery = countyQuery.concat(`,${co}`)}
         })
       
-      d3.json(`https://api.census.gov/data/2019/acs/acs5?get=NAME&for=tract:*&in=county:${countyQuery}&in=state:${stateNum}`).then(function(cenTracts) {
+      d3.json(`https://api.census.gov/data/2019/acs/acs5?get=NAME,${demogs}&for=tract:*&in=county:${countyQuery}&in=state:${stateNum}`).then(function(cenTracts) {
         cenTracts.forEach(t => {
           if (t[0] != 'NAME') {
 
-            properTract = d => {return d.FIPS == t[1].concat(t[2],t[3])}
+            properTract = d => {return d.FIPS == t[7].concat(t[8],t[9])}
 
             tracts.push(
               {
                 tract: data.filter(properTract)[0].FIPS,
                 // state: data.filter(properTract)[0].stateName,
                 // county: data.filter(properTract)[0].countyName,
-                ccvi: parseFloat(data.filter(properTract)[0].ccvi)
+                ccvi: parseFloat(data.filter(properTract)[0].ccvi),
+                whitePop: parseInt(t[1]),
+                blackPop: parseInt(t[2]),
+                nativePop: parseInt(t[3]),
+                asianPop: parseInt(t[4]),
+                pacificPop: parseInt(t[4]),
+                hispanicPop: parseInt(t[6])
               })
           
           }
         })
-
-        // tracts.forEach(t => {
-        //   t.ccvi = parseFloat(data.filter(d => {return d.FIPS == t.tract})[0].ccvi)
-        // })
 
         console.log(tracts)
 
