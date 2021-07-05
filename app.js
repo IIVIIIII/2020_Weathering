@@ -68,7 +68,7 @@ tracts = []
 
 d3.csv("resources/ccvi.csv").then(function(data) {
 
-  // console.log(data);
+  // console.log(data[0].FIPS);
 
   d3.json(`https://api.census.gov/data/2019/acs/acs5?get=NAME&for=place:*&in=state:${stateNum}`).then(function(cities) {
     cities.forEach(c => {
@@ -88,8 +88,12 @@ d3.csv("resources/ccvi.csv").then(function(data) {
         cenTracts.forEach(t => {
           if (t[0] != 'NAME') {tracts.push({tract: t[1].concat(t[2],t[3])})}
         })
-        console.log(tracts)
 
+        tracts.forEach(t => {
+          t.ccvi = parseFloat(data.filter(d => {return d.FIPS == t.tract})[0].ccvi)
+        })
+
+        console.log(tracts)
 
 
       })
