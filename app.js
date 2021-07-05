@@ -60,6 +60,7 @@ city = city.concat(' city')
 stateNum = states[state]
 fullCity = city.concat(`, ${state}`)
 countyNums = []
+countyQuery = ''
 
 // console.log(fullCity)
 // console.log(state)
@@ -78,7 +79,14 @@ d3.csv("resources/ccvi.csv").then(function(data) {
         counties.forEach(co => {
           if (co[0] != "NAME") {countyNums.push(co[3])}
         })
-        console.log(countyNums)
+        
+        countyNums.forEach((co, i) => {
+          if (i == 0) {countyQuery = co}
+          else {countyQuery = countyQuery.concat(`,${co}`)}
+        })
+
+        console.log(countyQuery)
+
       })
 
   })
