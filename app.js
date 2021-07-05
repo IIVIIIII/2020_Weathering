@@ -61,6 +61,7 @@ stateNum = states[state]
 fullCity = city.concat(`, ${state}`)
 countyNums = []
 countyQuery = ''
+tractNums = []
 
 // console.log(fullCity)
 // console.log(state)
@@ -74,23 +75,28 @@ d3.csv("resources/ccvi.csv").then(function(data) {
       if (c[0] == city.concat(`, ${state}`)) {city = (c[2])}
     })
 
-    d3.json(`https://api.census.gov/data/2019/acs/acs5?get=NAME&for=county%20(or%20part):*&in=state:${stateNum}%20place:${city}`)
-      .then(function(counties) {
+    d3.json(`https://api.census.gov/data/2019/acs/acs5?get=NAME&for=county%20(or%20part):*&in=state:${stateNum}%20place:${city}`).then(function(counties) {
         counties.forEach(co => {
-          if (co[0] != "NAME") {countyNums.push(co[3])}
-        })
-        
+          if (co[0] != 'NAME') {countyNums.push(co[3])}
+        })      
         countyNums.forEach((co, i) => {
           if (i == 0) {countyQuery = co}
           else {countyQuery = countyQuery.concat(`,${co}`)}
         })
+      
+      d3.json(`https://api.census.gov/data/2019/acs/acs5?get=NAME&for=tract:*&in=county:${countyQuery}&in=state:${stateNum}`).then(function(tracts) {
+        tracts.forEach(t => {
+          if (t[0] != 'NAME') {tractNums.push({tract: t[1].concat(t[2],t[3])})}
+        })
+        console.log(tractNums)
 
-        console.log(countyQuery)
+        
 
       })
-
+    })
   })
 
 // }).catch(function(error) {
 //   console.log(error);
+
 });
