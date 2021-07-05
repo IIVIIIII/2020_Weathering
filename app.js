@@ -88,12 +88,12 @@ d3.csv("resources/ccvi.csv").then(function(data) {
         cenTracts.forEach(t => {
           if (t[0] != 'NAME') {
 
+            properTract = d => {return d.FIPS == t[1].concat(t[2],t[3])}
 
             tracts.push(
               {
-                tract: data.filter(d => {return d.FIPS == t[1].concat(t[2],t[3])})[0].FIPS,
-                ccvi: parseFloat(data.filter(d => {return d.FIPS == t[1].concat(t[2],t[3])})[0].ccvi)
-              
+                tract: data.filter(properTract)[0].FIPS,
+                ccvi: parseFloat(data.filter(properTract)[0].ccvi)
               })
           
           }
