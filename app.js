@@ -114,6 +114,7 @@ d3.csv("resources/ccvi.csv").then(function(data) {
 
         Object.keys(demogs).forEach(key => {
           demogs[key].population = d3.sum(tracts.map(t => {return t[key]}))
+          demogs[key].ccvi = d3.sum(tracts.map(t => {return t[key]*t.ccvi})) / demogs[key].population
         })
 
         console.log(demogs)
