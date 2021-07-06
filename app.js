@@ -63,7 +63,6 @@ countyNums = []
 countyQuery = ''
 tracts = []
 pops = 'B02001_002E,B02001_003E,B02001_004E,B02001_005E,B02001_006E,B03001_003E'
-
 demogs = {
   white: {},
   black: {},
@@ -99,8 +98,6 @@ d3.csv("resources/ccvi.csv").then(function(data) {
 
             tracts.push({
               tract: data.filter(properTract)[0].FIPS,
-              // state: data.filter(properTract)[0].stateName,
-              // county: data.filter(properTract)[0].countyName,
               ccvi: parseFloat(data.filter(properTract)[0].ccvi),
               white: parseInt(t[1]),
               black: parseInt(t[2]),
@@ -122,8 +119,4 @@ d3.csv("resources/ccvi.csv").then(function(data) {
       })
     })
   })
-
-// }).catch(function(error) {
-//   console.log(error);
-
 });
