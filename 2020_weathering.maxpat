@@ -40,6 +40,18 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 223.5, 130.0, 241.0, 22.0 ],
+					"text" : "http://127.0.0.1:5000/api/v1.0/justice-league"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-9",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -148,7 +160,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 33.0, 239.0, 50.0, 62.0 ],
-					"text" : "dictionary u090002233"
+					"text" : "dictionary u418001405"
 				}
 
 			}
@@ -177,7 +189,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "dictionary", "" ],
-					"patching_rect" : [ 64.0, 168.0, 45.0, 22.0 ],
+					"patching_rect" : [ 64.0, 130.0, 45.0, 22.0 ],
 					"text" : "maxurl"
 				}
 
@@ -189,7 +201,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 141.0, 132.0, 252.0, 22.0 ],
+					"patching_rect" : [ 141.0, 94.0, 252.0, 22.0 ],
 					"text" : "get https://api.spacexdata.com/v3/launchpads"
 				}
 
@@ -201,7 +213,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 64.0, 102.0, 498.0, 22.0 ],
+					"patching_rect" : [ 64.0, 64.0, 498.0, 22.0 ],
 					"text" : "get https://api.waqi.info/feed/berlin/?token=0ef04c5034636b059cc35410d24da576acb2aa31"
 				}
 
@@ -263,6 +275,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
 					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"source" : [ "obj-5", 0 ]
 				}
 
 			}
