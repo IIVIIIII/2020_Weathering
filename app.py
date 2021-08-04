@@ -1,21 +1,17 @@
 from flask import Flask, jsonify
-
+import data4app
 
 app = Flask(__name__)
-
-hello_dict = {"Hello": "World!"}
-
 
 @app.route("/")
 def home():
     return "Hi"
 
-
 @app.route("/<var>")
 def jsonified(var):
-    dict = {'theword': var.replace(" ", "").lower()}
+    data = data4app.get_data(var)
 
-    return jsonify(dict)
+    return jsonify(data)
 
 
 if __name__ == "__main__":

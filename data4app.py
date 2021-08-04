@@ -211,5 +211,3 @@ def get_data(here):
                 
     # return resulting dictionary            
     return for_max
-
-print(get_data('California'))
