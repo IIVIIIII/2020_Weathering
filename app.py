@@ -11,14 +11,11 @@ def home():
     return "Hi"
 
 
-@app.route("/normal")
-def normal():
-    return hello_dict
+@app.route("/<var>")
+def jsonified(var):
+    dict = {'theword': var.replace(" ", "").lower()}
 
-
-@app.route("/jsonified")
-def jsonified():
-    return jsonify(hello_dict)
+    return jsonify(dict)
 
 
 if __name__ == "__main__":
