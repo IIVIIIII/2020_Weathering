@@ -16,3 +16,6 @@ def jsonified(var):
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+# import sys
+# print(f'\n{sys.prefix}\n')
