@@ -145,6 +145,9 @@ def get_data(here):
     # filter to only include data for selected state
     covid = covid.loc[covid['State'] == states[state]['abbr'],:]
 
+    # filter to only include data from 2020
+    covid = covid.loc[covid['Date'] < 20210000,:]
+
     # create dataframe with only relevant columns for covid cases
     cases = covid[['Cases_Total','Cases_White','Cases_Black','Cases_AIAN','Cases_Asian','Cases_NHPI','Cases_Latinx']]
 
