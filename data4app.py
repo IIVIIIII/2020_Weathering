@@ -69,10 +69,10 @@ def get_data(here):
 
 
 
-    # select state
-    state = here
+    # select state and convert to proper format
+    state = here.replace(" ", "").lower()
 
-    state_num = states[state.replace(" ", "").lower()]['num']
+    state_num = states[state]['num']
 
     # all statistical categories to to be queried 
     pops = 'B01003_001E,B02001_002E,B02001_003E,B02001_004E,B02001_005E,B02001_006E,B03001_003E'
@@ -143,7 +143,7 @@ def get_data(here):
     covid = pd.read_csv('resources/CRDT_Data.csv')
 
     # filter to only include data for selected state
-    covid = covid.loc[covid['State'] == states[state.replace(" ", "").lower()]['abbr'],:]
+    covid = covid.loc[covid['State'] == states[state]['abbr'],:]
 
     # create dataframe with only relevant columns for covid cases
     cases = covid[['Cases_Total','Cases_White','Cases_Black','Cases_AIAN','Cases_Asian','Cases_NHPI','Cases_Latinx']]
@@ -211,3 +211,4 @@ def get_data(here):
                 
     # return resulting dictionary            
     return for_max
+
