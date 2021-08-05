@@ -140,7 +140,7 @@ def get_data(here):
 
 
     # get covid data for each race by state
-    covid = pd.read_csv('../resources/CRDT_Data.csv')
+    covid = pd.read_csv('resources/CRDT_Data.csv')
 
     # filter to only include data for selected state
     covid = covid.loc[covid['State'] == states[state]['abbr'],:]
