@@ -7,7 +7,7 @@ function parseDict()
 	var dataAsString = myDict.get('body');
 	var parsedDict = new Dict('parsedDict');
 	
-	dataAsString ='{\"data\":' + dataAsString + '}'
+	//dataAsString ='{\"data\":' + dataAsString + '}'
 	//dataAsString = dataAsString.slice(0,-1)
 	//dataAsString = dataAsString
 	

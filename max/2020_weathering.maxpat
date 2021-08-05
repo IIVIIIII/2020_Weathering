@@ -45,8 +45,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 223.5, 130.0, 241.0, 22.0 ],
-					"text" : "http://127.0.0.1:5000/api/v1.0/justice-league"
+					"patching_rect" : [ 223.5, 130.0, 272.0, 22.0 ],
+					"text" : "get https://iiviiiii-2020-weathering.herokuapp.com/"
 				}
 
 			}
@@ -160,7 +160,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 33.0, 239.0, 50.0, 62.0 ],
-					"text" : "dictionary u418001405"
+					"text" : "dictionary u723001277"
 				}
 
 			}
@@ -319,7 +319,7 @@
 		"dependency_cache" : [ 			{
 				"name" : "stringToDict.js",
 				"bootpath" : "~/Desktop/Projects/Personal Projects/2020_Weathering/js",
-				"patcherrelativepath" : "./js",
+				"patcherrelativepath" : "../js",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
