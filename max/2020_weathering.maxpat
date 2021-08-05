@@ -45,8 +45,20 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 223.5, 130.0, 272.0, 22.0 ],
-					"text" : "get https://iiviiiii-2020-weathering.herokuapp.com/"
+					"patching_rect" : [ 64.0, 53.0, 53.0, 22.0 ],
+					"text" : "missouri"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 64.0, 88.0, 325.0, 22.0 ],
+					"text" : "sprintf get https://iiviiiii-2020-weathering.herokuapp.com/%s"
 				}
 
 			}
@@ -57,7 +69,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 293.0, 292.0, 102.0, 22.0 ],
+					"patching_rect" : [ 354.0, 134.0, 102.0, 22.0 ],
 					"text" : "get data[0]::name"
 				}
 
@@ -70,32 +82,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 400.0, 388.0, 50.0, 76.0 ],
+					"patching_rect" : [ 445.0, 227.0, 50.0, 76.0 ],
 					"text" : "data[0]::name \"VAFB SLC 3W\""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-23",
-					"linecount" : 2,
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 493.0, 281.0, 50.0, 35.0 ],
-					"text" : "parsedDict"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-19",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 428.0, 281.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -107,7 +95,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 160.0, 301.0, 24.0, 24.0 ]
+					"patching_rect" : [ 221.0, 143.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -118,7 +106,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 319.0, 179.0, 59.0, 22.0 ],
+					"patching_rect" : [ 477.0, 92.0, 59.0, 22.0 ],
 					"text" : "parseDict"
 				}
 
@@ -129,7 +117,7 @@
 					"maxclass" : "dict.view",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 160.0, 388.0, 169.0, 123.0 ]
+					"patching_rect" : [ 221.0, 227.0, 222.0, 179.0 ]
 				}
 
 			}
@@ -140,7 +128,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 160.0, 345.0, 88.0, 22.0 ],
+					"patching_rect" : [ 221.0, 187.0, 88.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0,
@@ -153,25 +141,12 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-10",
-					"linecount" : 4,
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 33.0, 239.0, 50.0, 62.0 ],
-					"text" : "dictionary u723001277"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-8",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 88.0, 239.0, 117.0, 22.0 ],
+					"patching_rect" : [ 64.0, 167.0, 117.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0,
@@ -196,36 +171,12 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-6",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 141.0, 94.0, 252.0, 22.0 ],
-					"text" : "get https://api.spacexdata.com/v3/launchpads"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 64.0, 64.0, 498.0, 22.0 ],
-					"text" : "get https://api.waqi.info/feed/berlin/?token=0ef04c5034636b059cc35410d24da576acb2aa31"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 319.0, 218.0, 95.0, 22.0 ],
+					"patching_rect" : [ 477.0, 134.0, 95.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "stringToDict.js",
 						"parameter_enable" : 0
@@ -237,13 +188,6 @@
 			}
  ],
 		"lines" : [ 			{
-				"patchline" : 				{
-					"destination" : [ "obj-23", 1 ],
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-12", 0 ],
 					"source" : [ "obj-11", 0 ]
@@ -274,36 +218,20 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
-					"source" : [ "obj-4", 0 ]
+					"source" : [ "obj-2", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
+					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
-					"source" : [ "obj-6", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-10", 1 ],
-					"order" : 1,
-					"source" : [ "obj-7", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
-					"order" : 0,
 					"source" : [ "obj-7", 0 ]
 				}
 
