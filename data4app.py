@@ -140,7 +140,7 @@ def get_data(here):
 
 
     # get covid data for each race by state
-    covid = pd.read_csv('resources/CRDT_Data.csv')
+    covid = pd.read_csv('../resources/CRDT_Data.csv')
 
     # filter to only include data for selected state
     covid = covid.loc[covid['State'] == states[state]['abbr'],:]
@@ -149,10 +149,10 @@ def get_data(here):
     covid = covid.loc[covid['Date'] < 20210000,:]
 
     # create dataframe with only relevant columns for covid cases
-    cases = covid[['Cases_Total','Cases_White','Cases_Black','Cases_AIAN','Cases_Asian','Cases_NHPI','Cases_Latinx']]
+    cases = covid[['Cases_Total','Cases_White','Cases_Black','Cases_AIAN','Cases_Asian','Cases_NHPI','Cases_Ethnicity_Hispanic']]
 
     # create dataframe with only relevant columns for covid deaths
-    deaths = covid[['Deaths_Total','Deaths_White','Deaths_Black','Deaths_AIAN','Deaths_Asian','Deaths_NHPI','Deaths_Latinx']]
+    deaths = covid[['Deaths_Total','Deaths_White','Deaths_Black','Deaths_AIAN','Deaths_Asian','Deaths_NHPI','Deaths_Ethnicity_Hispanic']]
 
 
 
