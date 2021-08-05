@@ -40,13 +40,25 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-13",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 125.0, 42.0, 133.0, 33.0 ],
+					"text" : "type desired state into message box"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-5",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 64.0, 53.0, 53.0, 22.0 ],
-					"text" : "missouri"
+					"patching_rect" : [ 64.0, 53.0, 57.0, 22.0 ],
+					"text" : "california"
 				}
 
 			}
@@ -69,21 +81,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 354.0, 134.0, 102.0, 22.0 ],
+					"patching_rect" : [ 113.0, 212.0, 102.0, 22.0 ],
 					"text" : "get data[0]::name"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-3",
-					"linecount" : 5,
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 445.0, 227.0, 50.0, 76.0 ],
-					"text" : "data[0]::name \"VAFB SLC 3W\""
 				}
 
 			}
@@ -95,7 +94,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 221.0, 143.0, 24.0, 24.0 ]
+					"patching_rect" : [ 64.0, 227.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -106,7 +105,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 477.0, 92.0, 59.0, 22.0 ],
+					"patching_rect" : [ 64.0, 160.0, 59.0, 22.0 ],
 					"text" : "parseDict"
 				}
 
@@ -117,7 +116,7 @@
 					"maxclass" : "dict.view",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 221.0, 227.0, 222.0, 179.0 ]
+					"patching_rect" : [ 113.0, 267.0, 222.0, 179.0 ]
 				}
 
 			}
@@ -128,7 +127,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 221.0, 187.0, 88.0, 22.0 ],
+					"patching_rect" : [ 113.0, 243.0, 88.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0,
@@ -146,7 +145,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 64.0, 167.0, 117.0, 22.0 ],
+					"patching_rect" : [ 64.0, 136.0, 117.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0,
@@ -164,7 +163,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "dictionary", "" ],
-					"patching_rect" : [ 64.0, 130.0, 45.0, 22.0 ],
+					"patching_rect" : [ 64.0, 112.0, 45.0, 22.0 ],
 					"text" : "maxurl"
 				}
 
@@ -176,7 +175,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 477.0, 134.0, 95.0, 22.0 ],
+					"patching_rect" : [ 64.0, 184.0, 95.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "stringToDict.js",
 						"parameter_enable" : 0
@@ -189,15 +188,15 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-12", 0 ],
-					"source" : [ "obj-11", 0 ]
+					"destination" : [ "obj-17", 0 ],
+					"source" : [ "obj-1", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-3", 1 ],
-					"source" : [ "obj-11", 1 ]
+					"destination" : [ "obj-12", 0 ],
+					"source" : [ "obj-11", 0 ]
 				}
 
 			}
@@ -233,6 +232,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
 					"source" : [ "obj-7", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"source" : [ "obj-8", 0 ]
 				}
 
 			}
