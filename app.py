@@ -5,11 +5,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    # data = data4app.get_data(var)
+    data = data4app.get_data('california')
 
-    # return jsonify(data)
+    return jsonify(data)
 
-    return "Whats up?"
+    # return "Whats up?"
 
 @app.route("/<var>")
 def jsonified(var):
