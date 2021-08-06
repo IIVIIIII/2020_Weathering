@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 744.0, 80.0, 640.0, 480.0 ],
+		"rect" : [ 768.0, 80.0, 443.0, 569.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,12 +40,24 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-45",
+					"linecount" : 4,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 199.0, 177.0, 93.0, 60.0 ],
+					"text" : "set different pathway to \"stringToDict.js\" if necessary"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-13",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 125.0, 42.0, 133.0, 33.0 ],
+					"patching_rect" : [ 124.0, 35.0, 133.0, 33.0 ],
 					"text" : "type desired state into message box"
 				}
 
@@ -57,8 +69,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 64.0, 53.0, 57.0, 22.0 ],
-					"text" : "california"
+					"patching_rect" : [ 63.0, 46.0, 53.0, 22.0 ],
+					"text" : "missouri"
 				}
 
 			}
@@ -69,7 +81,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 64.0, 88.0, 325.0, 22.0 ],
+					"patching_rect" : [ 63.0, 81.0, 325.0, 22.0 ],
 					"text" : "sprintf get https://iiviiiii-2020-weathering.herokuapp.com/%s"
 				}
 
@@ -81,8 +93,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 113.0, 212.0, 102.0, 22.0 ],
-					"text" : "get data[0]::name"
+					"patching_rect" : [ 103.0, 287.0, 85.0, 22.0 ],
+					"text" : "get asian::ccvi"
 				}
 
 			}
@@ -94,7 +106,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 64.0, 227.0, 24.0, 24.0 ]
+					"patching_rect" : [ 63.0, 287.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -105,7 +117,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 64.0, 160.0, 59.0, 22.0 ],
+					"patching_rect" : [ 63.0, 153.0, 59.0, 22.0 ],
 					"text" : "parseDict"
 				}
 
@@ -116,7 +128,7 @@
 					"maxclass" : "dict.view",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 113.0, 267.0, 222.0, 179.0 ]
+					"patching_rect" : [ 103.0, 363.0, 222.0, 179.0 ]
 				}
 
 			}
@@ -127,7 +139,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 113.0, 243.0, 88.0, 22.0 ],
+					"patching_rect" : [ 103.0, 324.0, 88.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0,
@@ -145,14 +157,14 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 64.0, 136.0, 117.0, 22.0 ],
+					"patching_rect" : [ 63.0, 129.0, 84.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
 					}
 ,
-					"text" : "dict myWeatherData"
+					"text" : "dict covidData"
 				}
 
 			}
@@ -163,7 +175,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "dictionary", "" ],
-					"patching_rect" : [ 64.0, 112.0, 45.0, 22.0 ],
+					"patching_rect" : [ 63.0, 105.0, 45.0, 22.0 ],
 					"text" : "maxurl"
 				}
 
@@ -171,17 +183,18 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-1",
+					"linecount" : 6,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 64.0, 184.0, 95.0, 22.0 ],
+					"patching_rect" : [ 63.0, 177.0, 134.0, 89.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "stringToDict.js",
+						"filename" : "Macintosh HD:/Users/kelvinwalls/Desktop/Projects/Personal_Projects/2020_Weathering/js/stringToDict.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js stringToDict.js"
+					"text" : "js \"Macintosh HD:/Users/kelvinwalls/Desktop/Projects/Personal_Projects/2020_Weathering/js/stringToDict.js\""
 				}
 
 			}
@@ -252,7 +265,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "stringToDict.js",
-				"bootpath" : "~/Desktop/Projects/Personal Projects/2020_Weathering/js",
+				"bootpath" : "~/Desktop/Projects/Personal_Projects/2020_Weathering/js",
 				"patcherrelativepath" : "../js",
 				"type" : "TEXT",
 				"implicit" : 1
