@@ -202,15 +202,15 @@ def get_data(here):
                     
             # calculate inverted ccvi values
             elif row == 'ccvi':
-                for_max[races[i]]['inverted_ccvi'] = 100-(values[i-1])*100
+                for_max[races[i]]['inverted_ccvi'] = round(100-(values[i-1])*100, 3)
             
             # calculate chances for where next infection will occure
             elif row == 'discrepancy_percent':
-                for_max[races[i]]['chance_of_infection'] = (values[i-1]/values.sum())*100
+                for_max[races[i]]['chance_of_infection'] = round((values[i-1]/values.sum())*100, 3)
             
             # get values for chance of infection resulting in death
             elif row == 'chance_of_death':
-                for_max[races[i]][row] = values[i-1]
+                for_max[races[i]][row] = round(values[i-1], 3)
                 
     # return resulting dictionary            
     return for_max
