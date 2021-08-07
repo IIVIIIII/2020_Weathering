@@ -191,7 +191,7 @@ def get_data(here):
         
         # create a list that holds all values within the row of a statistical category
         values = demographics.loc[row].values
-            
+
         # iterate through races
         for i in range(1, len(races)):
             
@@ -202,7 +202,7 @@ def get_data(here):
                     
             # calculate inverted ccvi values
             elif row == 'ccvi':
-                for_max[races[i]][row] = 100-(values[i-1])*100
+                for_max[races[i]]['inverted_ccvi'] = 100-(values[i-1])*100
             
             # calculate chances for where next infection will occure
             elif row == 'discrepancy_percent':
