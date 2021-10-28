@@ -2493,6 +2493,65 @@
 																		"visible" : 1,
 																		"boxes" : [ 																			{
 																				"box" : 																				{
+																					"id" : "obj-53",
+																					"maxclass" : "newobj",
+																					"numinlets" : 2,
+																					"numoutlets" : 2,
+																					"outlettype" : [ "signal", "bang" ],
+																					"patching_rect" : [ 522.0, 117.0, 47.0, 22.0 ],
+																					"saved_object_attributes" : 																					{
+																						"basictuning" : 440,
+																						"followglobaltempo" : 0,
+																						"formantcorrection" : 0,
+																						"mode" : "basic",
+																						"originallength" : [ 0.0, "ticks" ],
+																						"originaltempo" : 120.0,
+																						"pitchcorrection" : 0,
+																						"quality" : "basic",
+																						"timestretch" : [ 0 ]
+																					}
+,
+																					"text" : "sfplay~"
+																				}
+
+																			}
+, 																			{
+																				"box" : 																				{
+																					"id" : "obj-52",
+																					"maxclass" : "kslider",
+																					"numinlets" : 2,
+																					"numoutlets" : 2,
+																					"outlettype" : [ "int", "int" ],
+																					"parameter_enable" : 0,
+																					"patching_rect" : [ 550.0, 392.0, 336.0, 53.0 ]
+																				}
+
+																			}
+, 																			{
+																				"box" : 																				{
+																					"id" : "obj-48",
+																					"maxclass" : "comment",
+																					"numinlets" : 1,
+																					"numoutlets" : 0,
+																					"patching_rect" : [ 520.0, 231.0, 150.0, 20.0 ],
+																					"text" : "36 - 92"
+																				}
+
+																			}
+, 																			{
+																				"box" : 																				{
+																					"id" : "obj-38",
+																					"maxclass" : "number",
+																					"numinlets" : 1,
+																					"numoutlets" : 2,
+																					"outlettype" : [ "", "bang" ],
+																					"parameter_enable" : 0,
+																					"patching_rect" : [ 150.0, 552.0, 50.0, 22.0 ]
+																				}
+
+																			}
+, 																			{
+																				"box" : 																				{
 																					"id" : "obj-35",
 																					"maxclass" : "newobj",
 																					"numinlets" : 0,
@@ -2508,7 +2567,7 @@
 																						}
 ,
 																						"classnamespace" : "box",
-																						"rect" : [ 739.0, 358.0, 640.0, 480.0 ],
+																						"rect" : [ 225.0, 298.0, 640.0, 480.0 ],
 																						"bglocked" : 0,
 																						"openinpresentation" : 0,
 																						"default_fontsize" : 12.0,
@@ -2539,13 +2598,70 @@
 																						"visible" : 1,
 																						"boxes" : [ 																							{
 																								"box" : 																								{
-																									"id" : "obj-3",
+																									"id" : "obj-78",
+																									"maxclass" : "number",
+																									"numinlets" : 1,
+																									"numoutlets" : 2,
+																									"outlettype" : [ "", "bang" ],
+																									"parameter_enable" : 0,
+																									"patching_rect" : [ 336.0, 172.0, 50.0, 22.0 ]
+																								}
+
+																							}
+, 																							{
+																								"box" : 																								{
+																									"id" : "obj-76",
+																									"maxclass" : "newobj",
+																									"numinlets" : 1,
+																									"numoutlets" : 3,
+																									"outlettype" : [ "", "", "" ],
+																									"patching_rect" : [ 334.0, 242.0, 92.0, 22.0 ],
+																									"text" : "poly~ pianopoly"
+																								}
+
+																							}
+, 																							{
+																								"box" : 																								{
+																									"id" : "obj-58",
+																									"maxclass" : "ezdac~",
+																									"numinlets" : 2,
+																									"numoutlets" : 0,
+																									"patching_rect" : [ 334.0, 297.0, 45.0, 45.0 ]
+																								}
+
+																							}
+, 																							{
+																								"box" : 																								{
+																									"id" : "obj-36",
+																									"maxclass" : "message",
+																									"numinlets" : 2,
+																									"numoutlets" : 1,
+																									"outlettype" : [ "" ],
+																									"patching_rect" : [ 134.0, 176.0, 35.0, 22.0 ],
+																									"text" : "open"
+																								}
+
+																							}
+, 																							{
+																								"box" : 																								{
+																									"embed_buffers" : 																									{
+																										"piano.1" : "bb2.aif",
+																										"piano.2" : "c2.aif",
+																										"piano.3" : "db2.aif",
+																										"piano.4" : "g2.aif"
+																									}
+,
+																									"id" : "obj-27",
 																									"maxclass" : "newobj",
 																									"numinlets" : 1,
 																									"numoutlets" : 2,
-																									"outlettype" : [ "float", "bang" ],
-																									"patching_rect" : [ 71.0, 204.0, 79.0, 22.0 ],
-																									"text" : "buffer~ piano"
+																									"outlettype" : [ "", "bang" ],
+																									"patching_rect" : [ 71.0, 213.0, 163.0, 22.0 ],
+																									"saved_object_attributes" : 																									{
+																										"embed" : 1
+																									}
+,
+																									"text" : "polybuffer~ piano @embed 1"
 																								}
 
 																							}
@@ -2580,8 +2696,8 @@
 																									"numinlets" : 1,
 																									"numoutlets" : 1,
 																									"outlettype" : [ "" ],
-																									"patching_rect" : [ 71.0, 140.0, 95.0, 22.0 ],
-																									"text" : "prepend replace"
+																									"patching_rect" : [ 71.0, 140.0, 110.0, 22.0 ],
+																									"text" : "prepend readfolder"
 																								}
 
 																							}
@@ -2608,8 +2724,8 @@
 																									"numinlets" : 1,
 																									"numoutlets" : 1,
 																									"outlettype" : [ "" ],
-																									"patching_rect" : [ 71.0, 117.0, 223.0, 21.0 ],
-																									"text" : "sprintf symout %s../resources/audio/c3.aif"
+																									"patching_rect" : [ 71.0, 117.0, 192.0, 21.0 ],
+																									"text" : "sprintf symout %s../resources/audio"
 																								}
 
 																							}
@@ -2648,7 +2764,7 @@
 																							}
 , 																							{
 																								"patchline" : 																								{
-																									"destination" : [ "obj-3", 0 ],
+																									"destination" : [ "obj-27", 0 ],
 																									"source" : [ "obj-13", 0 ]
 																								}
 
@@ -2657,6 +2773,13 @@
 																								"patchline" : 																								{
 																									"destination" : [ "obj-44", 0 ],
 																									"source" : [ "obj-31", 0 ]
+																								}
+
+																							}
+, 																							{
+																								"patchline" : 																								{
+																									"destination" : [ "obj-27", 0 ],
+																									"source" : [ "obj-36", 0 ]
 																								}
 
 																							}
@@ -2678,6 +2801,27 @@
 																								"patchline" : 																								{
 																									"destination" : [ "obj-31", 0 ],
 																									"source" : [ "obj-52", 1 ]
+																								}
+
+																							}
+, 																							{
+																								"patchline" : 																								{
+																									"destination" : [ "obj-58", 1 ],
+																									"source" : [ "obj-76", 1 ]
+																								}
+
+																							}
+, 																							{
+																								"patchline" : 																								{
+																									"destination" : [ "obj-58", 0 ],
+																									"source" : [ "obj-76", 0 ]
+																								}
+
+																							}
+, 																							{
+																								"patchline" : 																								{
+																									"destination" : [ "obj-76", 0 ],
+																									"source" : [ "obj-78", 0 ]
 																								}
 
 																							}
@@ -3786,6 +3930,15 @@
 , 																			{
 																				"patchline" : 																				{
 																					"destination" : [ "obj-16", 0 ],
+																					"order" : 1,
+																					"source" : [ "obj-92", 0 ]
+																				}
+
+																			}
+, 																			{
+																				"patchline" : 																				{
+																					"destination" : [ "obj-38", 0 ],
+																					"order" : 0,
 																					"source" : [ "obj-92", 0 ]
 																				}
 
@@ -9342,7 +9495,14 @@
 
 			}
  ],
-		"dependency_cache" : [  ],
+		"dependency_cache" : [ 			{
+				"name" : "pianopoly.maxpat",
+				"bootpath" : "~/Desktop/Projects/Personal_Projects/2020_Weathering/max",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+ ],
 		"autosave" : 0
 	}
 
