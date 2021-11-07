@@ -62,7 +62,7 @@ def get_data(here):
         'newyork': {'num': '36', 'abbr': 'NY'},
         'northcarolina': {'num': '37', 'abbr': 'NC'},
         'northdakota': {'num': '38', 'abbr': 'ND'},
-        'k6': {'num': '41', 'abbr': 'OR'},
+        'oregon': {'num': '41', 'abbr': 'OR'},
         'pennsylvania': {'num': '42', 'abbr': 'PA'},
         'rhodeisland': {'num': '44', 'abbr': 'RI'}
     }
