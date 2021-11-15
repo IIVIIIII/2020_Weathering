@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 161.0, 657.0, 1068.0, 345.0 ],
+		"rect" : [ 143.0, 325.0, 1068.0, 345.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -234,6 +234,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-20",
@@ -3335,7 +3336,7 @@
 										}
 ,
 										"classnamespace" : "box",
-										"rect" : [ 174.0, 470.0, 578.0, 484.0 ],
+										"rect" : [ 867.0, 392.0, 578.0, 484.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -3363,18 +3364,8 @@
 										"style" : "",
 										"subpatcher_template" : "",
 										"assistshowspatchername" : 0,
+										"visible" : 1,
 										"boxes" : [ 											{
-												"box" : 												{
-													"id" : "obj-7",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 0,
-													"patching_rect" : [ 383.0, 166.0, 56.0, 22.0 ],
-													"text" : "s maxinc"
-												}
-
-											}
-, 											{
 												"box" : 												{
 													"id" : "obj-18",
 													"maxclass" : "comment",
@@ -3520,8 +3511,8 @@
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 179.5, 107.0, 184.0, 33.0 ],
-													"text" : "<max possible incubation period (x20sec)"
+													"patching_rect" : [ 173.5, 107.0, 230.0, 33.0 ],
+													"text" : "<max possible rescaled incubation period (x20sec, must be multiple of 2)"
 												}
 
 											}
@@ -3602,7 +3593,7 @@
 														}
 ,
 														"classnamespace" : "box",
-														"rect" : [ 458.0, 79.0, 767.0, 663.0 ],
+														"rect" : [ 892.0, 202.0, 767.0, 663.0 ],
 														"bglocked" : 0,
 														"openinpresentation" : 0,
 														"default_fontsize" : 12.0,
@@ -3630,15 +3621,39 @@
 														"style" : "",
 														"subpatcher_template" : "",
 														"assistshowspatchername" : 0,
+														"visible" : 1,
 														"boxes" : [ 															{
+																"box" : 																{
+																	"id" : "obj-22",
+																	"maxclass" : "newobj",
+																	"numinlets" : 2,
+																	"numoutlets" : 1,
+																	"outlettype" : [ "int" ],
+																	"patching_rect" : [ 552.0, 325.75, 50.0, 22.0 ],
+																	"text" : "* 20000"
+																}
+
+															}
+, 															{
+																"box" : 																{
+																	"id" : "obj-2",
+																	"maxclass" : "newobj",
+																	"numinlets" : 0,
+																	"numoutlets" : 1,
+																	"outlettype" : [ "" ],
+																	"patching_rect" : [ 552.0, 301.75, 54.0, 22.0 ],
+																	"text" : "r maxinc"
+																}
+
+															}
+, 															{
 																"box" : 																{
 																	"id" : "obj-56",
 																	"linecount" : 2,
 																	"maxclass" : "comment",
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
-																	"patching_rect" : [ 550.545454545454504, 264.75, 70.0, 33.0 ],
-																	"presentation_linecount" : 2,
+																	"patching_rect" : [ 542.5, 264.75, 73.0, 33.0 ],
 																	"text" : "restart after last case"
 																}
 
@@ -3650,7 +3665,7 @@
 																	"numinlets" : 2,
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
-																	"patching_rect" : [ 483.0, 299.75, 68.0, 22.0 ],
+																	"patching_rect" : [ 503.0, 349.75, 68.0, 22.0 ],
 																	"text" : "pipe 80000"
 																}
 
@@ -3662,7 +3677,7 @@
 																	"numinlets" : 2,
 																	"numoutlets" : 2,
 																	"outlettype" : [ "bang", "" ],
-																	"patching_rect" : [ 483.0, 275.75, 37.0, 22.0 ],
+																	"patching_rect" : [ 503.0, 325.75, 37.0, 22.0 ],
 																	"text" : "sel 0."
 																}
 
@@ -3673,7 +3688,7 @@
 																	"maxclass" : "newobj",
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
-																	"patching_rect" : [ 483.0, 323.75, 47.0, 22.0 ],
+																	"patching_rect" : [ 503.0, 373.75, 47.0, 22.0 ],
 																	"text" : "s begin"
 																}
 
@@ -3768,7 +3783,7 @@
 																	"maxclass" : "comment",
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
-																	"patching_rect" : [ 634.545454545454504, 254.75, 93.0, 47.0 ],
+																	"patching_rect" : [ 634.545454545454504, 254.75, 95.0, 47.0 ],
 																	"text" : "^calculate r0 as the average of all possibilities"
 																}
 
@@ -3804,7 +3819,7 @@
 																	"maxclass" : "comment",
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
-																	"patching_rect" : [ 406.545454545454504, 300.0, 64.0, 33.0 ],
+																	"patching_rect" : [ 406.545454545454504, 288.75, 64.0, 33.0 ],
 																	"text" : "<resulting r0 value"
 																}
 
@@ -3816,7 +3831,7 @@
 																	"maxclass" : "comment",
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
-																	"patching_rect" : [ 240.545454545454504, 336.75, 117.0, 87.0 ],
+																	"patching_rect" : [ 240.545454545454504, 336.75, 121.0, 87.0 ],
 																	"text" : "determines how many people the current case will actually infect based on the probabilities established"
 																}
 
@@ -5086,7 +5101,7 @@
 																	"maxclass" : "outlet",
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
-																	"patching_rect" : [ 374.545454545454504, 300.0, 30.0, 30.0 ]
+																	"patching_rect" : [ 374.545454545454504, 288.75, 30.0, 30.0 ]
 																}
 
 															}
@@ -5159,7 +5174,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "bang" ],
 																	"parameter_enable" : 0,
-																	"patching_rect" : [ 374.545454545454504, 276.0, 50.0, 22.0 ]
+																	"patching_rect" : [ 374.545454545454504, 264.75, 50.0, 22.0 ]
 																}
 
 															}
@@ -5285,7 +5300,7 @@
 																	"mode" : 0,
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
-																	"patching_rect" : [ 474.545454545454561, 264.75, 145.999999999999943, 94.0 ],
+																	"patching_rect" : [ 494.545454545454561, 264.75, 120.954545454545439, 136.0 ],
 																	"proportion" : 0.5,
 																	"rounded" : 20
 																}
@@ -5370,6 +5385,7 @@
 , 															{
 																"patchline" : 																{
 																	"destination" : [ "obj-20", 0 ],
+																	"midpoints" : [ 384.045454545454504, 260.0, 512.5, 260.0 ],
 																	"order" : 0,
 																	"source" : [ "obj-138", 0 ]
 																}
@@ -5427,8 +5443,22 @@
 															}
 , 															{
 																"patchline" : 																{
+																	"destination" : [ "obj-22", 0 ],
+																	"source" : [ "obj-2", 0 ]
+																}
+
+															}
+, 															{
+																"patchline" : 																{
 																	"destination" : [ "obj-25", 0 ],
 																	"source" : [ "obj-20", 0 ]
+																}
+
+															}
+, 															{
+																"patchline" : 																{
+																	"destination" : [ "obj-25", 1 ],
+																	"source" : [ "obj-22", 0 ]
 																}
 
 															}
@@ -16326,7 +16356,7 @@
 														}
 ,
 														"classnamespace" : "box",
-														"rect" : [ 1030.0, 142.0, 657.0, 823.0 ],
+														"rect" : [ 111.0, 103.0, 657.0, 823.0 ],
 														"bglocked" : 0,
 														"openinpresentation" : 0,
 														"default_fontsize" : 12.0,
@@ -16354,14 +16384,26 @@
 														"style" : "",
 														"subpatcher_template" : "",
 														"assistshowspatchername" : 0,
+														"visible" : 1,
 														"boxes" : [ 															{
+																"box" : 																{
+																	"id" : "obj-15",
+																	"maxclass" : "newobj",
+																	"numinlets" : 1,
+																	"numoutlets" : 0,
+																	"patching_rect" : [ 262.666666666666686, 482.0, 56.0, 22.0 ],
+																	"text" : "s maxinc"
+																}
+
+															}
+, 															{
 																"box" : 																{
 																	"id" : "obj-32",
 																	"linecount" : 3,
 																	"maxclass" : "comment",
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
-																	"patching_rect" : [ 108.0, 687.0, 82.0, 47.0 ],
+																	"patching_rect" : [ 108.0, 687.0, 86.0, 47.0 ],
 																	"text" : "^stop delayed notes during reset"
 																}
 
@@ -16397,7 +16439,7 @@
 																	"maxclass" : "comment",
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
-																	"patching_rect" : [ 191.999999999999972, 687.0, 69.166666666666686, 47.0 ],
+																	"patching_rect" : [ 191.999999999999972, 687.0, 73.0, 47.0 ],
 																	"text" : "^print delay time(s) to console"
 																}
 
@@ -16409,7 +16451,7 @@
 																	"maxclass" : "comment",
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
-																	"patching_rect" : [ 422.958333333333258, 403.125, 188.0, 288.0 ],
+																	"patching_rect" : [ 422.958333333333258, 403.125, 190.0, 288.0 ],
 																	"text" : "calculate rescaled incubation period as delay in milliseconds.\n\nmaximum incubation period of 2 weeks is rescaled to a duration of 20*i seconds where (i) is set by the user.\n\nselects one delay value from the just determined subdivision of as many measures as will fit within the rescaled max incubation period at a tempo of 120 bpm.\n\nFor example: a max possible incubation period of 20*(4) seconds with a subdivision value of 4 will result in an incubation period of anywhere from 1 to 160 quarter notes at 120 bpm (500 to 80,000ms)"
 																}
 
@@ -16504,7 +16546,7 @@
 																	"maxclass" : "comment",
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
-																	"patching_rect" : [ 262.666666666666686, 449.5, 154.0, 33.0 ],
+																	"patching_rect" : [ 271.666666666666686, 444.0, 154.0, 33.0 ],
 																	"text" : "^max possible rescaled incubation period (x20sec)"
 																}
 
@@ -17095,7 +17137,16 @@
 															}
 , 															{
 																"patchline" : 																{
+																	"destination" : [ "obj-15", 0 ],
+																	"order" : 0,
+																	"source" : [ "obj-3", 0 ]
+																}
+
+															}
+, 															{
+																"patchline" : 																{
 																	"destination" : [ "obj-35", 1 ],
+																	"order" : 1,
 																	"source" : [ "obj-3", 0 ]
 																}
 
