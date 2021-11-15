@@ -234,7 +234,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-20",
@@ -3511,7 +3510,7 @@
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 173.5, 107.0, 230.0, 33.0 ],
+													"patching_rect" : [ 173.5, 107.0, 232.0, 33.0 ],
 													"text" : "<max possible rescaled incubation period (x20sec, must be multiple of 2)"
 												}
 
@@ -3593,7 +3592,7 @@
 														}
 ,
 														"classnamespace" : "box",
-														"rect" : [ 892.0, 202.0, 767.0, 663.0 ],
+														"rect" : [ 837.0, 170.0, 767.0, 663.0 ],
 														"bglocked" : 0,
 														"openinpresentation" : 0,
 														"default_fontsize" : 12.0,
@@ -3832,7 +3831,7 @@
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
 																	"patching_rect" : [ 240.545454545454504, 336.75, 121.0, 87.0 ],
-																	"text" : "determines how many people the current case will actually infect based on the probabilities established"
+																	"text" : "determine how many people the current case will actually infect based on the probabilities established"
 																}
 
 															}
@@ -3843,8 +3842,8 @@
 																	"maxclass" : "comment",
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
-																	"patching_rect" : [ 172.045454545454561, 34.0, 151.0, 47.0 ],
-																	"text" : "<determines the options for how many people a case can infect"
+																	"patching_rect" : [ 172.045454545454561, 34.0, 152.0, 47.0 ],
+																	"text" : "<determine the options for how many people a case can infect"
 																}
 
 															}
