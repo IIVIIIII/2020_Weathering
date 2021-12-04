@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 341.0, 131.0, 1066.0, 345.0 ],
+		"rect" : [ 316.0, 321.0, 1066.0, 345.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -44,30 +44,6 @@
 					"bgcolor2" : [ 0.823529, 0.823529, 0.823529, 1.0 ],
 					"bgfillcolor_angle" : 270.0,
 					"bgfillcolor_autogradient" : 0.0,
-					"bgfillcolor_color" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"bgfillcolor_color1" : [ 0.823529, 0.823529, 0.823529, 1.0 ],
-					"bgfillcolor_color2" : [ 0.8, 0.8, 0.8, 1.0 ],
-					"bgfillcolor_proportion" : 0.5,
-					"bgfillcolor_type" : "color",
-					"gradient" : 1,
-					"id" : "obj-2",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 598.5, 61.0, 109.0, 22.0 ],
-					"text" : "begin",
-					"textjustification" : 1,
-					"varname" : "user1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bgcolor" : [ 0.823529, 0.823529, 0.823529, 1.0 ],
-					"bgcolor2" : [ 0.823529, 0.823529, 0.823529, 1.0 ],
-					"bgfillcolor_angle" : 270.0,
-					"bgfillcolor_autogradient" : 0.0,
 					"bgfillcolor_color" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"bgfillcolor_color1" : [ 0.823529, 0.823529, 0.823529, 1.0 ],
 					"bgfillcolor_color2" : [ 0.8, 0.8, 0.8, 1.0 ],
@@ -84,6 +60,30 @@
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"textjustification" : 1,
 					"varname" : "user0"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.823529, 0.823529, 0.823529, 1.0 ],
+					"bgcolor2" : [ 0.823529, 0.823529, 0.823529, 1.0 ],
+					"bgfillcolor_angle" : 270.0,
+					"bgfillcolor_autogradient" : 0.0,
+					"bgfillcolor_color" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgfillcolor_color1" : [ 0.823529, 0.823529, 0.823529, 1.0 ],
+					"bgfillcolor_color2" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"bgfillcolor_proportion" : 0.5,
+					"bgfillcolor_type" : "color",
+					"gradient" : 1,
+					"id" : "obj-2",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 598.5, 61.0, 109.0, 22.0 ],
+					"text" : "begin",
+					"textjustification" : 1,
+					"varname" : "user1"
 				}
 
 			}
@@ -3695,7 +3695,7 @@
 														}
 ,
 														"classnamespace" : "box",
-														"rect" : [ 854.0, 183.0, 767.0, 663.0 ],
+														"rect" : [ 728.0, 347.0, 767.0, 663.0 ],
 														"bglocked" : 0,
 														"openinpresentation" : 0,
 														"default_fontsize" : 12.0,
@@ -3723,7 +3723,6 @@
 														"style" : "",
 														"subpatcher_template" : "",
 														"assistshowspatchername" : 0,
-														"visible" : 1,
 														"boxes" : [ 															{
 																"box" : 																{
 																	"id" : "obj-27",
@@ -3731,7 +3730,7 @@
 																	"maxclass" : "comment",
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
-																	"patching_rect" : [ 374.545454545454504, 325.75, 96.0, 33.0 ],
+																	"patching_rect" : [ 374.545454545454504, 325.75, 97.0, 33.0 ],
 																	"text" : "^INACCURATE, ADJUST!"
 																}
 
@@ -3802,7 +3801,7 @@
 																	"maxclass" : "newobj",
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
-																	"patching_rect" : [ 503.0, 373.75, 47.0, 22.0 ],
+																	"patching_rect" : [ 503.0, 374.0, 47.0, 22.0 ],
 																	"text" : "s begin"
 																}
 
@@ -3945,7 +3944,7 @@
 																	"maxclass" : "comment",
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
-																	"patching_rect" : [ 240.545454545454504, 336.75, 123.0, 87.0 ],
+																	"patching_rect" : [ 240.545454545454504, 336.75, 117.000000000000057, 87.0 ],
 																	"text" : "determine how many people the current case will actually infect based on the probabilities established"
 																}
 
@@ -3981,7 +3980,7 @@
 																		}
 ,
 																		"classnamespace" : "box",
-																		"rect" : [ -39.0, 370.0, 655.0, 871.0 ],
+																		"rect" : [ 46.0, 193.0, 655.0, 871.0 ],
 																		"bglocked" : 0,
 																		"openinpresentation" : 0,
 																		"default_fontsize" : 12.0,
@@ -4009,7 +4008,6 @@
 																		"style" : "",
 																		"subpatcher_template" : "",
 																		"assistshowspatchername" : 0,
-																		"visible" : 1,
 																		"boxes" : [ 																			{
 																				"box" : 																				{
 																					"id" : "obj-29",
@@ -4535,7 +4533,7 @@
 																					"numoutlets" : 1,
 																					"outlettype" : [ "" ],
 																					"patching_rect" : [ 69.845454545454572, 692.0, 54.25, 22.0 ],
-																					"text" : "0 0 1 11"
+																					"text" : "12 0 0 0"
 																				}
 
 																			}
@@ -5320,7 +5318,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 73.545454545454561, 276.0, 129.0, 35.0 ],
-																	"text" : "3 0 0, 3 1 0, 3 2 1, 3 3 11"
+																	"text" : "3 0 12, 3 1 0, 3 2 0, 3 3 0"
 																}
 
 															}
@@ -5420,7 +5418,7 @@
 																	"mode" : 0,
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
-																	"patching_rect" : [ 37.545454545454561, 336.75, 319.999999999999943, 212.0 ],
+																	"patching_rect" : [ 37.545454545454561, 336.75, 320.0, 212.0 ],
 																	"proportion" : 0.5,
 																	"rounded" : 20
 																}
@@ -7488,6 +7486,14 @@
 , 																							{
 																								"patchline" : 																								{
 																									"destination" : [ "obj-68", 0 ],
+																									"order" : 1,
+																									"source" : [ "obj-65", 1 ]
+																								}
+
+																							}
+, 																							{
+																								"patchline" : 																								{
+																									"destination" : [ "obj-68", 0 ],
 																									"source" : [ "obj-65", 0 ]
 																								}
 
@@ -7495,6 +7501,7 @@
 , 																							{
 																								"patchline" : 																								{
 																									"destination" : [ "obj-71", 0 ],
+																									"order" : 0,
 																									"source" : [ "obj-65", 1 ]
 																								}
 
@@ -7644,7 +7651,7 @@
 																						}
 ,
 																						"classnamespace" : "box",
-																						"rect" : [ 686.0, 398.0, 471.0, 628.0 ],
+																						"rect" : [ 332.0, 282.0, 471.0, 628.0 ],
 																						"bglocked" : 0,
 																						"openinpresentation" : 0,
 																						"default_fontsize" : 12.0,
@@ -8902,6 +8909,14 @@
 , 																							{
 																								"patchline" : 																								{
 																									"destination" : [ "obj-68", 0 ],
+																									"order" : 1,
+																									"source" : [ "obj-65", 1 ]
+																								}
+
+																							}
+, 																							{
+																								"patchline" : 																								{
+																									"destination" : [ "obj-68", 0 ],
 																									"source" : [ "obj-65", 0 ]
 																								}
 
@@ -8909,6 +8924,7 @@
 , 																							{
 																								"patchline" : 																								{
 																									"destination" : [ "obj-71", 0 ],
+																									"order" : 0,
 																									"source" : [ "obj-65", 1 ]
 																								}
 
@@ -9058,7 +9074,7 @@
 																						}
 ,
 																						"classnamespace" : "box",
-																						"rect" : [ 686.0, 398.0, 471.0, 628.0 ],
+																						"rect" : [ 247.0, 320.0, 471.0, 628.0 ],
 																						"bglocked" : 0,
 																						"openinpresentation" : 0,
 																						"default_fontsize" : 12.0,
@@ -10316,6 +10332,14 @@
 , 																							{
 																								"patchline" : 																								{
 																									"destination" : [ "obj-68", 0 ],
+																									"order" : 1,
+																									"source" : [ "obj-65", 1 ]
+																								}
+
+																							}
+, 																							{
+																								"patchline" : 																								{
+																									"destination" : [ "obj-68", 0 ],
 																									"source" : [ "obj-65", 0 ]
 																								}
 
@@ -10323,6 +10347,7 @@
 , 																							{
 																								"patchline" : 																								{
 																									"destination" : [ "obj-71", 0 ],
+																									"order" : 0,
 																									"source" : [ "obj-65", 1 ]
 																								}
 
@@ -10472,7 +10497,7 @@
 																						}
 ,
 																						"classnamespace" : "box",
-																						"rect" : [ 686.0, 398.0, 471.0, 628.0 ],
+																						"rect" : [ 278.0, 395.0, 471.0, 628.0 ],
 																						"bglocked" : 0,
 																						"openinpresentation" : 0,
 																						"default_fontsize" : 12.0,
@@ -10555,7 +10580,7 @@
 																									"maxclass" : "comment",
 																									"numinlets" : 1,
 																									"numoutlets" : 0,
-																									"patching_rect" : [ 176.0, 70.625, 109.0, 114.0 ],
+																									"patching_rect" : [ 176.0, 70.625, 111.0, 114.0 ],
 																									"text" : "use extracted data to determine if case results in death. if so then record it as such and lower note to be generated by a semitone"
 																								}
 
@@ -11730,6 +11755,14 @@
 , 																							{
 																								"patchline" : 																								{
 																									"destination" : [ "obj-68", 0 ],
+																									"order" : 1,
+																									"source" : [ "obj-65", 1 ]
+																								}
+
+																							}
+, 																							{
+																								"patchline" : 																								{
+																									"destination" : [ "obj-68", 0 ],
 																									"source" : [ "obj-65", 0 ]
 																								}
 
@@ -11737,6 +11770,7 @@
 , 																							{
 																								"patchline" : 																								{
 																									"destination" : [ "obj-71", 0 ],
+																									"order" : 0,
 																									"source" : [ "obj-65", 1 ]
 																								}
 
@@ -11969,7 +12003,7 @@
 																									"maxclass" : "comment",
 																									"numinlets" : 1,
 																									"numoutlets" : 0,
-																									"patching_rect" : [ 180.0, 70.625, 109.0, 114.0 ],
+																									"patching_rect" : [ 180.0, 70.625, 105.0, 114.0 ],
 																									"text" : "use extracted data to determine if case results in death. if so then record it as such and lower note to be generated by a semitone"
 																								}
 
@@ -13144,6 +13178,14 @@
 , 																							{
 																								"patchline" : 																								{
 																									"destination" : [ "obj-68", 0 ],
+																									"order" : 1,
+																									"source" : [ "obj-65", 1 ]
+																								}
+
+																							}
+, 																							{
+																								"patchline" : 																								{
+																									"destination" : [ "obj-68", 0 ],
 																									"source" : [ "obj-65", 0 ]
 																								}
 
@@ -13151,6 +13193,7 @@
 , 																							{
 																								"patchline" : 																								{
 																									"destination" : [ "obj-71", 0 ],
+																									"order" : 0,
 																									"source" : [ "obj-65", 1 ]
 																								}
 
@@ -13479,7 +13522,7 @@
 																									"maxclass" : "comment",
 																									"numinlets" : 1,
 																									"numoutlets" : 0,
-																									"patching_rect" : [ 159.0, 482.0, 151.0, 47.0 ],
+																									"patching_rect" : [ 159.0, 482.0, 154.0, 47.0 ],
 																									"text" : "<pan audio to approximate spatialization in installation setting"
 																								}
 
@@ -13527,7 +13570,7 @@
 																									"maxclass" : "comment",
 																									"numinlets" : 1,
 																									"numoutlets" : 0,
-																									"patching_rect" : [ 183.0, 70.625, 105.0, 114.0 ],
+																									"patching_rect" : [ 183.0, 70.625, 109.0, 114.0 ],
 																									"text" : "use extracted data to determine if case results in death. if so then record it as such and lower note to be generated by a semitone"
 																								}
 
@@ -14702,6 +14745,14 @@
 , 																							{
 																								"patchline" : 																								{
 																									"destination" : [ "obj-68", 0 ],
+																									"order" : 1,
+																									"source" : [ "obj-65", 1 ]
+																								}
+
+																							}
+, 																							{
+																								"patchline" : 																								{
+																									"destination" : [ "obj-68", 0 ],
 																									"source" : [ "obj-65", 0 ]
 																								}
 
@@ -14709,6 +14760,7 @@
 , 																							{
 																								"patchline" : 																								{
 																									"destination" : [ "obj-71", 0 ],
+																									"order" : 0,
 																									"source" : [ "obj-65", 1 ]
 																								}
 
@@ -14945,7 +14997,7 @@
 																					"numoutlets" : 1,
 																					"outlettype" : [ "" ],
 																					"patching_rect" : [ 176.545454545454561, 194.0, 398.0, 22.0 ],
-																					"text" : "6 1 637, 6 2 1170, 6 3 1695, 6 4 451, 6 5 5162, 6 6 884"
+																					"text" : "6 1 1366, 6 2 2493, 6 3 2772, 6 4 1304, 6 5 184, 6 6 1882"
 																				}
 
 																			}
