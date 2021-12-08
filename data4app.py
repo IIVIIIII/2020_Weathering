@@ -164,17 +164,19 @@ def get_data(here):
 
 
 
-    timing = {}
+    timing = {'data': {}}
     ms = 0
+    infections = -1
 
     for time in result:
         
         if time[0] != ms:
-            timing[time[0]] = {'demoNotes': [(time[1], time[2], time[3])]}
-            timing[time[0]]['delay'] = time[0] - ms
+            infections += 1
+            timing['data'][infections] = {'demoNotes': [(time[1], time[2], time[3])]}
+            timing['data'][infections]['delay'] = time[0] - ms
             ms = time[0]
             
         else:
-            timing[time[0]]['demoNotes'].append((time[1], time[2], time[3]))
+            timing['data'][infections]['demoNotes'].append((time[1], time[2], time[3]))
 
     return timing
