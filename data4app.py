@@ -1,182 +1,221 @@
 def get_data(here):
 
     # import dependencies
-    # import pandas as pd
-    # import numpy as np
-    import random
+    import pandas as pd
+    import requests
     import json
 
+    # read csv on covid-19 covid vulnerability index data and convert to dataframe
+    ccvi = pd.read_csv('resources/ccvi.csv')
 
-
-    # select desired state
-    state = here
-
-    # access json file with data to be sonified for avaliable states
-    stateData = json.load(open('resources/stateData.json'))
-
-    # list to hold probabilities for which demographic a new case will belong to
-    infectProbs = []
-    # list to hold probability that an infection will result in death for each demographic
-    deathProbs = []
-
-    # populate lists above
-    for data in stateData[state]:
-        infectProbs.append(stateData[state][data]['chance_of_infection'])
-        deathProbs.append(stateData[state][data]['chance_of_death'])
+    # drow rows that contain any null values (there are 655 of them)
+    ccvi = ccvi.dropna(how='any')
 
 
 
-    # weighted probabilities for #people the current case can spread infection to
-    # (from left to right, values refer to weights for 0, 1, 2, and 3 new infections)
-    spreadProbs = [0,0,0,12]
-    # symptomatic cases that have occured
-    sympCount = 0
-    # deaths that have occured
-    deathCount = 0
-    # case count threshold for when new r0 shoud be calculated
-    thresh = 0
-    # nth threshold
-    n = 1
-    # infection rate
-    r0 = 3
-    # transposition in semitones
-    trans = 0
-    # cases remaining (one case to start it off)
-    more = [0]
-    # which case
-    case = 0
-    # dictionary with all data
-    weathering = {
-        'time': [],
-        'demo': [],
-        'note': [],
-        'death': []
+    # dictionary for convertying state names to corresponding numbers or abbreviations
+    states = {
+        'southcarolina': {'num': '45', 'abbr': 'SC'},
+        'southdakota': {'num': '46', 'abbr': 'SD'},
+        'tennessee': {'num': '47', 'abbr': 'TN'},
+        'texas': {'num': '48', 'abbr': 'TX'},
+        'vermont': {'num': '50', 'abbr': 'VT'},
+        'utah': {'num': '49', 'abbr': 'UT'},
+        'virginia': {'num': '51', 'abbr': 'VA'},
+        'washington': {'num': '53', 'abbr': 'WA'},
+        'westvirginia': {'num': '54', 'abbr': 'WV'},
+        'wisconsin': {'num': '55', 'abbr': 'WI'},
+        'wyoming': {'num': '56', 'abbr': 'WY'},
+        'puertorico': {'num': '72', 'abbr': 'PR'},
+        'alabama': {'num': '01', 'abbr': 'AL'},
+        'alaska': {'num': '02', 'abbr': 'AK'},
+        'arizona': {'num': '04', 'abbr': 'AZ'},
+        'arkansas': {'num': '05', 'abbr': 'AR'},
+        'california': {'num': '06', 'abbr': 'CA'},
+        'colorado': {'num': '08', 'abbr': 'CO'},
+        'delaware': {'num': '10', 'abbr': 'CT'},
+        'districtofcolumbia': {'num': '11', 'abbr': 'DE'},
+        'connecticut': {'num': '09', 'abbr': 'DC'},
+        'florida': {'num': '12', 'abbr': 'FL'},
+        'georgia': {'num': '13', 'abbr': 'GA'},
+        'idaho': {'num': '16', 'abbr': 'ID'},
+        'hawaii': {'num': '15', 'abbr': 'HI'},
+        'illinois': {'num': '17', 'abbr': 'IL'},
+        'indiana': {'num': '18', 'abbr': 'IN'},
+        'iowa': {'num': '19', 'abbr': 'IA'},
+        'kansas': {'num': '20', 'abbr': 'KS'},
+        'kentucky': {'num': '21', 'abbr': 'KS'},
+        'louisiana': {'num': '22', 'abbr': 'LA'},
+        'maine': {'num': '23', 'abbr': 'ME'},
+        'maryland': {'num': '24', 'abbr': 'MD'},
+        'massachusetts': {'num': '25', 'abbr': 'MA'},
+        'michigan': {'num': '26', 'abbr': 'MI'},
+        'minnesota': {'num': '27', 'abbr': 'MN'},
+        'mississippi': {'num': '28', 'abbr': 'MS'},
+        'missouri': {'num': '29', 'abbr': 'MO'},
+        'montana': {'num': '30', 'abbr': 'MT'},
+        'nebraska': {'num': '31', 'abbr': 'NE'},
+        'nevada': {'num': '32', 'abbr': 'NV'},
+        'newhampshire': {'num': '33', 'abbr': 'NH'},
+        'newjersey': {'num': '34', 'abbr': 'NJ'},
+        'newmexico': {'num': '35', 'abbr': 'NM'},
+        'newyork': {'num': '36', 'abbr': 'NY'},
+        'northcarolina': {'num': '37', 'abbr': 'NC'},
+        'northdakota': {'num': '38', 'abbr': 'ND'},
+        'oregon': {'num': '41', 'abbr': 'OR'},
+        'pennsylvania': {'num': '42', 'abbr': 'PA'},
+        'rhodeisland': {'num': '44', 'abbr': 'RI'}
     }
 
 
 
+    # select state and convert to proper format
+    state = here.replace(" ", "").lower()
+
+    state_num = states[state]['num']
+
+    # all statistical categories to to be queried 
+    pops = 'B01003_001E,B02001_002E,B02001_003E,B02001_004E,B02001_005E,B02001_006E,B03001_003E'
+
+    # create url to request data from api
+    url = f'https://api.census.gov/data/2019/acs/acs5?get=NAME,{pops}&for=tract:*&in=state:{state_num}'
+
+    # set returned data to a variable
+    response = requests.get(url).json()
 
 
-    # function to determine how many cases correspond to a particular threshold
-    def nthThresh(n,t):
-        return 100 * n + t
 
-    # function to adjust spreadProbs weights and calculate r0 for corresponding threshold
-    def thisThresh():
-        if n == 1:
-            spreadProbs[3] -= 1
-            spreadProbs[2] += 1
-        elif n == 2:
-            spreadProbs[3] -= 1
-            spreadProbs[1] += 1
-        elif n == 13:
-            spreadProbs[2] -= 1
-            spreadProbs[0] += 1
-        elif n == 14:
-            spreadProbs[1] -= 1
-            spreadProbs[0] += 1
-        elif n != 0 and n < 13:
-            spreadProbs[3] -= 1
-            spreadProbs[0] += 1
-        r0 = (spreadProbs[1] + 2*spreadProbs[2] + 3*spreadProbs[3]) / sum(spreadProbs)
+    # create list to store dictionaries with data for each census tract
+    tracts = []
+
+    # create dictionaries with population data for each census tract 
+    # (with properly formatted fips code)
+    for r in response:
+        if r[0] != 'NAME':
+            tracts.append({
+                'FIPS': int(f'{r[8]}{r[9]}{r[10]}'),
+                'total': int(r[1]),
+                'white': int(r[2]),
+                'black': int(r[3]),
+                'native': int(r[4]),
+                'asian': int(r[5]),
+                'pacific': int(r[6]),
+                'hispanic': int(r[7])
+            })
+
+    # create dataframe with census population data
+    populations = pd.DataFrame(tracts)
+
+    # merge population data and ccvi data on census tract fips code
+    ccvi_and_pop = pd.merge(populations, ccvi, on='FIPS')
+
+
+
+    # create dictionary to hold data for each racial demographic
+    demogs = {
+        'total': {},
+        'white': {},
+        'black': {},
+        'native': {},
+        'asian': {},
+        'pacific': {},
+        'hispanic': {}
+    }
+
+    # create list of racial groups to iterate through
+    races = ['total','white','black','native','asian', 'pacific', 'hispanic']
+
+    # iterate through list of races
+    for race in races:
         
-    # function to select a value based on a probability distribution array
-    def select(probsArray):
-        return random.choices(list(range(len(probsArray))),weights=probsArray)[0]
-
-    # function to decide between one and zero based on probability that 1 will be chosen
-    def decide(prob):
-        ran = random.uniform(0,100)
-        if ran < prob:
-            return 1
-        else:
-            return 0
-
-    def incubate(n):
-        if n == 1:
-            divide = 4
-            subdivide = divide*40
-            delay = random.randint(0, subdivide)
-            time = delay*2000/divide
-            return time
-
-
-
- 
-
-
-
-    while len(more) > 0:
+        # calculate total population for each race
+        demogs[race]['population'] = int(ccvi_and_pop[race].sum())
         
-        # decide how many people the current case infects and add them to more
-        for i in range(select(spreadProbs)):
-            more.append(case)
-            
-        # decide if asymptomatic or not
-        if decide(40) == 0:
-            
-            # add current case to total # of cases
-            # (only sympotmatic cases adjust threshold)
-            sympCount += 1
-            
-            # if case count is at or over threshold number
-            if sympCount >= nthThresh(n, thresh):
-                # calculate new threshold
-                thresh = nthThresh(n, thresh)
-                # adjust spreadProbs weights and calculate r0 for corresponding threshold
-                thisThresh()
-                # add one to threshold n value
-                n += 1
-            
-            # select which demographic the current case belongs to
-            demo = select(infectProbs)
-            weathering['demo'].append(demo)
-            
-            # select which note
-            weathering['note'].append(random.randint(0,12))
-            
-            # select incubation period (delay time)
-            delay = incubate(1)
-            
-            # calculate time from beginning that symptoms occur for current case
-            if sympCount == 1:
-                time = delay
-            else:
-                time = delay + weathering['time'][more[0]]
-            weathering['time'].append(time)
-
-            # decide/record if case results in death or not
-            death = decide(deathProbs[demo])
-            weathering['death'].append(death)
-            
-            case += 1
-            
-        # remove current case from how many more cases left
-        more.pop(0)
-    
-    
-
-
-    result = list(zip(weathering['time'], weathering['demo'], weathering['note'], weathering['death']))
-
-    result = sorted(result, reverse=False)
-
-
-
-
-    timing = {'data': {}}
-    ms = 0
-    infections = -1
-
-    for time in result:
+        # calculate average ccvi for each race
+        demogs[race]['ccvi'] = (ccvi_and_pop[race]*ccvi_and_pop['ccvi']).sum()/demogs[race]['population']
         
-        if time[0] != ms:
-            infections += 1
-            timing['data'][infections] = {'demoNotes': [(time[1], time[2], time[3])]}
-            timing['data'][infections]['delay'] = time[0] - ms
-            ms = time[0]
-            
-        else:
-            timing['data'][infections]['demoNotes'].append((time[1], time[2], time[3]))
+        # calculate population of each race as a percentage of total population
+        demogs[race]['population_percent'] = (demogs[race]['population']/demogs['total']['population'])*100
 
-    return timing
+
+
+    # get covid data for each race by state
+    covid = pd.read_csv('resources/CRDT_Data.csv')
+
+    # filter to only include data for selected state
+    covid = covid.loc[covid['State'] == states[state]['abbr'],:]
+
+    # filter to only include data from 2020
+    covid = covid.loc[covid['Date'] < 20210000,:]
+
+    # create dataframe with only relevant columns for covid cases
+    cases = covid[['Cases_Total','Cases_White','Cases_Black','Cases_AIAN','Cases_Asian','Cases_NHPI','Cases_Ethnicity_Hispanic']]
+
+    # create dataframe with only relevant columns for covid deaths
+    deaths = covid[['Deaths_Total','Deaths_White','Deaths_Black','Deaths_AIAN','Deaths_Asian','Deaths_NHPI','Deaths_Ethnicity_Hispanic']]
+
+
+
+    # iterate through covid data for selected races and place data in a dictionary
+    for i in range(0, len(cases.columns)):
+        
+        # total cases for each race
+        demogs[races[i]]['cases'] = int(cases[cases.columns[i]].values[0])
+        
+        # number of cases for each race as a percentage of total cases
+        demogs[races[i]]['percent_of_cases'] = (demogs[races[i]]['cases']/demogs['total']['cases'])*100
+        
+        # percent discrepancy between percent of total cases and percent of total population for by each race
+        # (theoretically each race should account for the same percent of cases as their percent of the population)
+        demogs[races[i]]['discrepancy_percent'] = (demogs[races[i]]['percent_of_cases']/demogs[races[i]]['population_percent'])*100
+        
+        # total deaths for each race
+        demogs[races[i]]['deaths'] = int(deaths[deaths.columns[i]].values[0])
+        
+        # chance of an infection resulting in death for each race
+        demogs[races[i]]['chance_of_death'] = (demogs[races[i]]['deaths']/demogs[races[i]]['cases'])*100
+        
+        # number of deaths for each race as a percentage of total deaths
+        demogs[races[i]]['percent_of_deaths'] = (demogs[races[i]]['deaths']/demogs['total']['deaths'])*100
+
+    # create dataframe without total population values
+    demographics = pd.DataFrame(demogs).drop(columns=['total'])
+
+
+
+    # create dictionary to hold calculated values to be used in max patch
+    for_max = {}
+
+    # iterate through statistical categories
+    for row in list(demographics.index):
+        
+        # create a list that holds all values within the row of a statistical category
+        values = demographics.loc[row].values
+
+        # iterate through races
+        for i in range(1, len(races)):
+            
+            # get population numbers
+            if row == 'population':
+                for_max[races[i]] = {}
+                for_max[races[i]][row] = int(values[i-1])
+                    
+            # calculate inverted ccvi values
+            elif row == 'ccvi':
+                for_max[races[i]]['inverted_ccvi'] = round(100-(values[i-1])*100, 2)
+            
+            # calculate chances for where next infection will occure
+            elif row == 'discrepancy_percent':
+                for_max[races[i]]['chance_of_infection'] = round((values[i-1]/values.sum())*100, 2)
+            
+            # get values for chance of infection resulting in death
+            elif row == 'chance_of_death':
+                for_max[races[i]][row] = round(values[i-1], 2)
+
+    # create keys to hold number of cases and deaths generated by Max alogrithm
+    for key in for_max:
+        for_max[key]['generated_cases'] = 0
+        for_max[key]['generated_deaths'] = 0
+                
+    # return resulting dictionary            
+    return for_max
