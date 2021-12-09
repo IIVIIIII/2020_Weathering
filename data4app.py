@@ -45,6 +45,8 @@ def get_data(here):
     more = [0]
     # which case
     case = 0
+    # array of midi notes
+    midiNotes = [48, 51, 55, 58, 62, 63, 65, 67, 68, 68, 74, 77, 78, 80]
     # dictionary with all data
     weathering = {
         'time': [],
@@ -52,7 +54,6 @@ def get_data(here):
         'note': [],
         'death': []
     }
-
 
 
 
@@ -133,7 +134,7 @@ def get_data(here):
             weathering['demo'].append(demo)
             
             # select which note
-            weathering['note'].append(random.randint(0,12))
+            weathering['note'].append(midi(0))
             
             # select incubation period (delay time)
             delay = incubate(1)
@@ -154,6 +155,8 @@ def get_data(here):
         # remove current case from how many more cases left
         more.pop(0)
     
+    
+
     
 
 
