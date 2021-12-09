@@ -93,6 +93,12 @@ def get_data(here):
         else:
             return 0
 
+    # function to generate midi notes
+    def midi(t):
+        ran = random.randint(0,13)
+        midi = midiNotes[ran]
+        return midi + t
+
     def incubate(n):
         if n == 1:
             divide = 4
@@ -100,6 +106,7 @@ def get_data(here):
             delay = random.randint(0, subdivide)
             time = delay*2000/divide
             return time
+
 
 
 
@@ -157,7 +164,7 @@ def get_data(here):
     
     
 
-    
+
 
 
     result = list(zip(weathering['time'], weathering['demo'], weathering['note'], weathering['death']))
