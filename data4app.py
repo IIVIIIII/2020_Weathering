@@ -177,7 +177,7 @@ def get_data(here):
             ms = time[0]
             
         else:
-            for i in range(1,3):
+            for i in range(1,4):
                 timing[infections]['demoNotes'].append(time[i])
 
     return timing
