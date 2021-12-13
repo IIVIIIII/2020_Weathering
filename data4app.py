@@ -8,31 +8,24 @@ def get_data(here):
 
 
 
+
     # select desired state
     state = here
-
     # access json file with data to be sonified for avaliable states
     stateData = json.load(open('resources/stateData.json'))
-
     # list to hold probabilities for which demographic a new case will belong to
     infectProbs = []
     # list to hold probability that an infection will result in death for each demographic
     deathProbs = []
-
     # populate lists above
     for data in stateData[state]:
         infectProbs.append(stateData[state][data]['chance_of_infection'])
         deathProbs.append(stateData[state][data]['chance_of_death'])
-
-
-
     # weighted probabilities for #people the current case can spread infection to
     # (from left to right, values refer to weights for 0, 1, 2, and 3 new infections)
     spreadProbs = [0,0,0,12]
     # symptomatic cases that have occured
     sympCount = 0
-    # deaths that have occured
-    deathCount = 0
     # case count threshold for when new r0 shoud be calculated
     thresh = 0
     # nth threshold
@@ -81,41 +74,45 @@ def get_data(here):
             spreadProbs[0] += 1
         r0 = (spreadProbs[1] + 2*spreadProbs[2] + 3*spreadProbs[3]) / sum(spreadProbs)
         
+    # function to select rescaled incubation period as a delay in milliseconds.
+    def incubate(n):
+        if n == 1:  
+            sub = 3
+            return random.randint(0, sub*40)*2000/sub
+        elif n == 2:
+            sub = random.choice([3,4])
+            return random.randint(0, sub*40)*2000/sub
+        elif n == 3:
+            sub = random.choice([6,4])
+            return random.randint(0, sub*40)*2000/sub
+        elif n == 4:
+            sub = random.choice([6,8])
+            return random.randint(0, sub*40)*2000/sub
+        elif n == 5:
+            sub = random.choice([6,8,5])
+            return random.randint(0, sub*40)*2000/sub
+        else:
+            sub = random.choice([6,8,5,7])
+            return random.randint(0, sub*40)*2000/sub
+        
     # function to select a value based on a probability distribution array
     def select(probsArray):
         return random.choices(list(range(len(probsArray))),weights=probsArray)[0]
 
     # function to decide between one and zero based on probability that 1 will be chosen
     def decide(prob):
-        ran = random.uniform(0,100)
-        if ran < prob:
-            return 1
-        else:
-            return 0
+        return random.choices([0,1], weights=[100-prob, prob])[0]
 
     # function to generate midi notes
     def midi(t):
-        ran = random.randint(0,13)
-        midi = midiNotes[ran]
-        return midi + t
+        note = random.choice(midiNotes)
+        return note + t
 
-    def incubate(n):
-        if n == 1:
-            divide = 4
-            subdivide = divide*40
-            delay = random.randint(0, subdivide)
-            time = delay*2000/divide
-            return time
-
-
-
-
- 
 
 
 
     while len(more) > 0:
-        
+    
         # decide how many people the current case infects and add them to more
         for i in range(select(spreadProbs)):
             more.append(case)
@@ -144,7 +141,7 @@ def get_data(here):
             weathering['note'].append(midi(0))
             
             # select incubation period (delay time)
-            delay = incubate(1)
+            delay = incubate(n)
             
             # calculate time from beginning that symptoms occur for current case
             if sympCount == 1:
@@ -164,13 +161,9 @@ def get_data(here):
     
     
 
-
-
-
     result = list(zip(weathering['time'], weathering['demo'], weathering['note'], weathering['death']))
 
     result = sorted(result, reverse=False)
-
 
 
 
