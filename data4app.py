@@ -125,7 +125,7 @@ def get_data(here):
         sympCount += 1
 
         # if case count is at or over threshold number
-        if sympCount >= nthThresh(n, thresh):
+        if sympCount > nthThresh(n, thresh):
             # calculate new threshold
             thresh = nthThresh(n, thresh)
             # adjust spreadProbs weights and calculate r0 for corresponding threshold
