@@ -117,44 +117,44 @@ def get_data(here):
         for i in range(select(spreadProbs)):
             more.append(case)
             
-        # decide if asymptomatic or not
-        if decide(40) == 0:
+    #     # decide if asymptomatic or not
+    #     if decide(40) == 0:
             
-            # add current case to total # of cases
-            # (only sympotmatic cases adjust threshold)
-            sympCount += 1
-            
-            # if case count is at or over threshold number
-            if sympCount >= nthThresh(n, thresh):
-                # calculate new threshold
-                thresh = nthThresh(n, thresh)
-                # adjust spreadProbs weights and calculate r0 for corresponding threshold
-                thisThresh()
-                # add one to threshold n value
-                n += 1
-            
-            # select which demographic the current case belongs to
-            demo = select(infectProbs)
-            weathering['demo'].append(demo)
-            
-            # select which note
-            weathering['note'].append(midi(0))
-            
-            # select incubation period (delay time)
-            delay = incubate(n)
-            
-            # calculate time from beginning that symptoms occur for current case
-            if sympCount == 1:
-                time = delay
-            else:
-                time = delay + weathering['time'][more[0]]
-            weathering['time'].append(time)
+        # add current case to total # of cases
+        # (only sympotmatic cases adjust threshold)
+        sympCount += 1
 
-            # decide/record if case results in death or not
-            death = decide(deathProbs[demo])
-            weathering['death'].append(death)
-            
-            case += 1
+        # if case count is at or over threshold number
+        if sympCount >= nthThresh(n, thresh):
+            # calculate new threshold
+            thresh = nthThresh(n, thresh)
+            # adjust spreadProbs weights and calculate r0 for corresponding threshold
+            thisThresh()
+            # add one to threshold n value
+            n += 1
+
+        # select which demographic the current case belongs to
+        demo = select(infectProbs)
+        weathering['demo'].append(demo)
+
+        # select which note
+        weathering['note'].append(midi(0))
+
+        # select incubation period (delay time)
+        delay = incubate(1)
+
+        # calculate time from beginning that symptoms occur for current case
+        if sympCount == 1:
+            time = delay
+        else:
+            time = delay + weathering['time'][more[0]]
+        weathering['time'].append(time)
+
+        # decide/record if case results in death or not
+        death = decide(deathProbs[demo])
+        weathering['death'].append(death)
+
+        case += 1
             
         # remove current case from how many more cases left
         more.pop(0)
