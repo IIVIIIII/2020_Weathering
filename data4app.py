@@ -141,7 +141,7 @@ def get_data(here):
         weathering['note'].append(midi(0))
 
         # select incubation period (delay time)
-        delay = incubate(1)
+        delay = incubate(n)
 
         # calculate time from beginning that symptoms occur for current case
         if sympCount == 1:
