@@ -155,8 +155,6 @@ def get_data(here):
             death = decide(deathProbs[demo])
             weathering['death'].append(death)
 
-            weathering['n'].append(n)
-
         # remove current case from timestaps of remaining cases
         times.pop(0)
     
