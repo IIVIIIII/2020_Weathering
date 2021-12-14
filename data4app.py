@@ -35,7 +35,7 @@ def get_data(here):
     # transposition in semitones
     trans = 0
     # cases remaining (one case to start it off)
-    more = [0]
+    times = [0]
     # which case
     case = 0
     # array of midi notes
@@ -111,19 +111,14 @@ def get_data(here):
 
 
 
-    while len(more) > 0:
-    
-        # decide how many people the current case infects and add them to more
-        for i in range(select(spreadProbs)):
-            more.append(case)
-            
-    #     # decide if asymptomatic or not
-    #     if decide(40) == 0:
-            
+    while len(times) > 0:
+        
+        times = sorted(times)
+        
         # add current case to total # of cases
-        # (only sympotmatic cases adjust threshold)
+            # (only sympotmatic cases adjust threshold)
         sympCount += 1
-
+        
         # if case count is at or over threshold number
         if sympCount > nthThresh(n, thresh):
             # calculate new threshold
@@ -133,37 +128,43 @@ def get_data(here):
             # add one to threshold n value
             n += 1
 
-        # select which demographic the current case belongs to
-        demo = select(infectProbs)
-        weathering['demo'].append(demo)
-
-        # select which note
-        weathering['note'].append(midi(0))
-
-        # select incubation period (delay time)
-        delay = incubate(n)
-
-        # calculate time from beginning that symptoms occur for current case
-        if sympCount == 1:
-            time = delay
-        else:
-            time = delay + weathering['time'][more[0]]
-        weathering['time'].append(time)
-
-        # decide/record if case results in death or not
-        death = decide(deathProbs[demo])
-        weathering['death'].append(death)
-
-        case += 1
+        # decide how many people the current case infects and add them to more
+        for i in range(select(spreadProbs)): 
             
-        # remove current case from how many more cases left
-        more.pop(0)
+            
+    #         # decide if asymptomatic or not
+    #         if decide(40) == 0:
+
+            # select which demographic the current case belongs to
+            demo = select(infectProbs)
+            weathering['demo'].append(demo)
+
+            # select which note
+            weathering['note'].append(midi(0))
+
+            # select incubation period (delay time)
+            delay = incubate(n)
+            
+            time = delay + times[0]
+            
+            weathering['time'].append(time)
+            
+            times.append(time)
+
+            # decide/record if case results in death or not
+            death = decide(deathProbs[demo])
+            weathering['death'].append(death)
+
+            weathering['n'].append(n)
+
+        # remove current case from timestaps of remaining cases
+        times.pop(0)
     
     
 
     result = list(zip(weathering['time'], weathering['demo'], weathering['note'], weathering['death']))
 
-    result = sorted(result, reverse=False)
+    result = sorted(result)
 
 
 
