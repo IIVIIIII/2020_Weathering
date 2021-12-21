@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 316.0, 321.0, 1066.0, 345.0 ],
+		"rect" : [ 194.0, 113.0, 1066.0, 345.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,27 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgfillcolor_angle" : 270.0,
+					"bgfillcolor_autogradient" : 0.0,
+					"bgfillcolor_color" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgfillcolor_color1" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgfillcolor_color2" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"bgfillcolor_proportion" : 0.5,
+					"bgfillcolor_type" : "color",
+					"id" : "obj-1",
+					"items" : [ "*select", "a", "state*", ",", "alaska", ",", "arkansas", ",", "california", ",", "colorado", ",", "georgia", ",", "illinois", ",", "iowa", ",", "maine", ",", "minnesota", ",", "missouri", ",", "nebraska", ",", "oregon", ",", "tennessee", ",", "utah", ",", "washington", ",", "wyoming" ],
+					"maxclass" : "umenu",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "int", "", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 598.5, 91.0, 109.0, 22.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"bgcolor" : [ 0.823529, 0.823529, 0.823529, 1.0 ],
 					"bgcolor2" : [ 0.823529, 0.823529, 0.823529, 1.0 ],
@@ -167,27 +188,6 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"bgfillcolor_angle" : 270.0,
-					"bgfillcolor_autogradient" : 0.0,
-					"bgfillcolor_color" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"bgfillcolor_color1" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"bgfillcolor_color2" : [ 0.8, 0.8, 0.8, 1.0 ],
-					"bgfillcolor_proportion" : 0.5,
-					"bgfillcolor_type" : "color",
-					"id" : "obj-5",
-					"items" : [ "*select", "a", "state*", ",", "Tennessee", ",", "Utah", ",", "Washington", ",", "Wyoming", ",", "Alaska", ",", "Arkansas", ",", "California", ",", "Colorado", ",", "Georgia", ",", "Illinois", ",", "Iowa", ",", "Maine", ",", "Minnesota", ",", "Missouri", ",", "Nebraska", ",", "Oregon" ],
-					"maxclass" : "umenu",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "int", "", "" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 598.5, 91.0, 109.0, 22.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontname" : "Helvetica",
 					"fontsize" : 72.0,
 					"id" : "obj-16",
@@ -310,7 +310,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 519.0, 277.0, 602.0, 427.0 ],
+						"rect" : [ 799.0, 243.0, 620.0, 390.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -340,12 +340,980 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-38",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 78.0, 22.0, 91.0, 20.0 ],
+									"text" : "<selected state"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-34",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 90.0, 147.0, 36.0, 22.0 ],
+									"text" : "route"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-33",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 46.0, 83.0, 73.0, 22.0 ],
+									"text" : "prepend get"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"data" : 									{
+										"tennessee" : 										{
+											"white" : 											{
+												"population" : 5200531,
+												"inverted_ccvi" : 45.909999999999997,
+												"chance_of_infection" : 15.44,
+												"chance_of_death" : 1.47,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"black" : 											{
+												"population" : 1120221,
+												"inverted_ccvi" : 28.16,
+												"chance_of_infection" : 15.65,
+												"chance_of_death" : 1.68,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"native" : 											{
+												"population" : 18151,
+												"inverted_ccvi" : 40.659999999999997,
+												"chance_of_infection" : 9.31,
+												"chance_of_death" : 1.12,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"asian" : 											{
+												"population" : 117348,
+												"inverted_ccvi" : 49.700000000000003,
+												"chance_of_infection" : 9.41,
+												"chance_of_death" : 0.79,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"pacific" : 											{
+												"population" : 3735,
+												"inverted_ccvi" : 37.369999999999997,
+												"chance_of_infection" : 24.52,
+												"chance_of_death" : 1.03,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"hispanic" : 											{
+												"population" : 363753,
+												"inverted_ccvi" : 32.450000000000003,
+												"chance_of_infection" : 25.670000000000002,
+												"chance_of_death" : 0.55,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+
+										}
+,
+										"utah" : 										{
+											"white" : 											{
+												"population" : 2674582,
+												"inverted_ccvi" : 72.780000000000001,
+												"chance_of_infection" : 8.16,
+												"chance_of_death" : 0.49,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"black" : 											{
+												"population" : 36778,
+												"inverted_ccvi" : 57.840000000000003,
+												"chance_of_infection" : 13.550000000000001,
+												"chance_of_death" : 0.37,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"native" : 											{
+												"population" : 33608,
+												"inverted_ccvi" : 49.609999999999999,
+												"chance_of_infection" : 15.029999999999999,
+												"chance_of_death" : 1.36,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"asian" : 											{
+												"population" : 71977,
+												"inverted_ccvi" : 65.620000000000005,
+												"chance_of_infection" : 9.710000000000001,
+												"chance_of_death" : 0.74,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"pacific" : 											{
+												"population" : 27547,
+												"inverted_ccvi" : 60.700000000000003,
+												"chance_of_infection" : 34.579999999999998,
+												"chance_of_death" : 0.61,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"hispanic" : 											{
+												"population" : 434309,
+												"inverted_ccvi" : 57.289999999999999,
+												"chance_of_infection" : 18.960000000000001,
+												"chance_of_death" : 0.34,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+
+										}
+,
+										"washington" : 										{
+											"white" : 											{
+												"population" : 5581123,
+												"inverted_ccvi" : 62.960000000000001,
+												"chance_of_infection" : 6.4,
+												"chance_of_death" : 3.74,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"black" : 											{
+												"population" : 281683,
+												"inverted_ccvi" : 45.869999999999997,
+												"chance_of_infection" : 15.289999999999999,
+												"chance_of_death" : 1.38,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"native" : 											{
+												"population" : 94449,
+												"inverted_ccvi" : 48.210000000000001,
+												"chance_of_infection" : 11.84,
+												"chance_of_death" : 3.63,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"asian" : 											{
+												"population" : 631333,
+												"inverted_ccvi" : 57.509999999999998,
+												"chance_of_infection" : 7.35,
+												"chance_of_death" : 2.9,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"pacific" : 											{
+												"population" : 49090,
+												"inverted_ccvi" : 47.93,
+												"chance_of_infection" : 30.370000000000001,
+												"chance_of_death" : 2.05,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"hispanic" : 											{
+												"population" : 937579,
+												"inverted_ccvi" : 43.509999999999998,
+												"chance_of_infection" : 28.75,
+												"chance_of_death" : 0.89,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+
+										}
+,
+										"wyoming" : 										{
+											"white" : 											{
+												"population" : 531304,
+												"inverted_ccvi" : 80.140000000000001,
+												"chance_of_infection" : 7.89,
+												"chance_of_death" : 1.48,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"black" : 											{
+												"population" : 5582,
+												"inverted_ccvi" : 79.909999999999997,
+												"chance_of_infection" : 11.57,
+												"chance_of_death" : 0.29,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"native" : 											{
+												"population" : 14164,
+												"inverted_ccvi" : 61.520000000000003,
+												"chance_of_infection" : 25.18,
+												"chance_of_death" : 1.95,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"asian" : 											{
+												"population" : 5025,
+												"inverted_ccvi" : 82.799999999999997,
+												"chance_of_infection" : 8.09,
+												"chance_of_death" : 1.85,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"pacific" : 											{
+												"population" : 596,
+												"inverted_ccvi" : 82.219999999999999,
+												"chance_of_infection" : 36.020000000000003,
+												"chance_of_death" : 0.88,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"hispanic" : 											{
+												"population" : 57341,
+												"inverted_ccvi" : 75.150000000000006,
+												"chance_of_infection" : 11.24,
+												"chance_of_death" : 0.76,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+
+										}
+,
+										"alaska" : 										{
+											"white" : 											{
+												"population" : 473686,
+												"inverted_ccvi" : 74.659999999999997,
+												"chance_of_infection" : 7.73,
+												"chance_of_death" : 0.51,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"black" : 											{
+												"population" : 24177,
+												"inverted_ccvi" : 66.450000000000003,
+												"chance_of_infection" : 12.890000000000001,
+												"chance_of_death" : 0.64,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"native" : 											{
+												"population" : 109456,
+												"inverted_ccvi" : 53.289999999999999,
+												"chance_of_infection" : 20.800000000000001,
+												"chance_of_death" : 0.8,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"asian" : 											{
+												"population" : 45880,
+												"inverted_ccvi" : 62.530000000000001,
+												"chance_of_infection" : 10.17,
+												"chance_of_death" : 1.07,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"pacific" : 											{
+												"population" : 9194,
+												"inverted_ccvi" : 60.130000000000003,
+												"chance_of_infection" : 35.600000000000001,
+												"chance_of_death" : 0.92,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"hispanic" : 											{
+												"population" : 51781,
+												"inverted_ccvi" : 69.909999999999997,
+												"chance_of_infection" : 12.800000000000001,
+												"chance_of_death" : 0.23,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+
+										}
+,
+										"arkansas" : 										{
+											"white" : 											{
+												"population" : 2301044,
+												"inverted_ccvi" : 54.100000000000001,
+												"chance_of_infection" : 8.84,
+												"chance_of_death" : 1.81,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"black" : 											{
+												"population" : 459542,
+												"inverted_ccvi" : 38.539999999999999,
+												"chance_of_infection" : 11.699999999999999,
+												"chance_of_death" : 1.45,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"native" : 											{
+												"population" : 20434,
+												"inverted_ccvi" : 49.840000000000003,
+												"chance_of_infection" : 4.52,
+												"chance_of_death" : 1.1,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"asian" : 											{
+												"population" : 45504,
+												"inverted_ccvi" : 54.140000000000001,
+												"chance_of_infection" : 6.37,
+												"chance_of_death" : 1.1,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"pacific" : 											{
+												"population" : 8733,
+												"inverted_ccvi" : 28.600000000000001,
+												"chance_of_infection" : 51.619999999999997,
+												"chance_of_death" : 1.64,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"hispanic" : 											{
+												"population" : 224130,
+												"inverted_ccvi" : 37.340000000000003,
+												"chance_of_infection" : 16.949999999999999,
+												"chance_of_death" : 0.51,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+
+										}
+,
+										"california" : 										{
+											"white" : 											{
+												"population" : 23405251,
+												"inverted_ccvi" : 42.520000000000003,
+												"chance_of_infection" : 7.08,
+												"chance_of_death" : 2.41,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"black" : 											{
+												"population" : 2253401,
+												"inverted_ccvi" : 29.469999999999999,
+												"chance_of_infection" : 14.869999999999999,
+												"chance_of_death" : 2.63,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"native" : 											{
+												"population" : 302002,
+												"inverted_ccvi" : 33.280000000000001,
+												"chance_of_infection" : 8.76,
+												"chance_of_death" : 1.59,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"asian" : 											{
+												"population" : 5684633,
+												"inverted_ccvi" : 42.32,
+												"chance_of_infection" : 9.19,
+												"chance_of_death" : 2.8,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"pacific" : 											{
+												"population" : 154637,
+												"inverted_ccvi" : 36.369999999999997,
+												"chance_of_infection" : 29.940000000000001,
+												"chance_of_death" : 1.45,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"hispanic" : 											{
+												"population" : 15288340,
+												"inverted_ccvi" : 26.489999999999998,
+												"chance_of_infection" : 30.16,
+												"chance_of_death" : 1.3,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+
+										}
+,
+										"colorado" : 										{
+											"white" : 											{
+												"population" : 4698006,
+												"inverted_ccvi" : 72.829999999999998,
+												"chance_of_infection" : 8.460000000000001,
+												"chance_of_death" : 2.35,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"black" : 											{
+												"population" : 230942,
+												"inverted_ccvi" : 56.920000000000002,
+												"chance_of_infection" : 12.69,
+												"chance_of_death" : 1.83,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"native" : 											{
+												"population" : 54108,
+												"inverted_ccvi" : 61.75,
+												"chance_of_infection" : 10.76,
+												"chance_of_death" : 1.4,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"asian" : 											{
+												"population" : 177941,
+												"inverted_ccvi" : 72.209999999999994,
+												"chance_of_infection" : 7.83,
+												"chance_of_death" : 2.32,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"pacific" : 											{
+												"population" : 8543,
+												"inverted_ccvi" : 65.810000000000002,
+												"chance_of_infection" : 35.259999999999998,
+												"chance_of_death" : 0.94,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"hispanic" : 											{
+												"population" : 1203827,
+												"inverted_ccvi" : 56.719999999999999,
+												"chance_of_infection" : 25.010000000000002,
+												"chance_of_death" : 1.02,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+
+										}
+,
+										"georgia" : 										{
+											"white" : 											{
+												"population" : 6096907,
+												"inverted_ccvi" : 42.119999999999997,
+												"chance_of_infection" : 13.19,
+												"chance_of_death" : 2.47,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"black" : 											{
+												"population" : 3284148,
+												"inverted_ccvi" : 27.850000000000001,
+												"chance_of_infection" : 17.039999999999999,
+												"chance_of_death" : 2.49,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"native" : 											{
+												"population" : 37370,
+												"inverted_ccvi" : 30.440000000000001,
+												"chance_of_infection" : 3.55,
+												"chance_of_death" : 2.85,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"asian" : 											{
+												"population" : 414474,
+												"inverted_ccvi" : 45.259999999999998,
+												"chance_of_infection" : 10.02,
+												"chance_of_death" : 1.58,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"pacific" : 											{
+												"population" : 6233,
+												"inverted_ccvi" : 34.840000000000003,
+												"chance_of_infection" : 31.879999999999999,
+												"chance_of_death" : 1.14,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"hispanic" : 											{
+												"population" : 991701,
+												"inverted_ccvi" : 30.27,
+												"chance_of_infection" : 24.309999999999999,
+												"chance_of_death" : 0.91,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+
+										}
+,
+										"illinois" : 										{
+											"white" : 											{
+												"population" : 9134517,
+												"inverted_ccvi" : 59.590000000000003,
+												"chance_of_infection" : 8.66,
+												"chance_of_death" : 2.78,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"black" : 											{
+												"population" : 1813531,
+												"inverted_ccvi" : 32.710000000000001,
+												"chance_of_infection" : 11.210000000000001,
+												"chance_of_death" : 3.53,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"native" : 											{
+												"population" : 33460,
+												"inverted_ccvi" : 42.219999999999999,
+												"chance_of_infection" : 7.98,
+												"chance_of_death" : 1.76,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"asian" : 											{
+												"population" : 698495,
+												"inverted_ccvi" : 54.299999999999997,
+												"chance_of_infection" : 6.59,
+												"chance_of_death" : 2.98,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"pacific" : 											{
+												"population" : 4477,
+												"inverted_ccvi" : 49.390000000000001,
+												"chance_of_infection" : 46.590000000000003,
+												"chance_of_death" : 1.8,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"hispanic" : 											{
+												"population" : 2186231,
+												"inverted_ccvi" : 34.07,
+												"chance_of_infection" : 18.969999999999999,
+												"chance_of_death" : 1.5,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+
+										}
+,
+										"iowa" : 										{
+											"white" : 											{
+												"population" : 2826070,
+												"inverted_ccvi" : 70.239999999999995,
+												"chance_of_infection" : 10.199999999999999,
+												"chance_of_death" : 2.08,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"black" : 											{
+												"population" : 116359,
+												"inverted_ccvi" : 51.409999999999997,
+												"chance_of_infection" : 12.18,
+												"chance_of_death" : 1.11,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"native" : 											{
+												"population" : 11976,
+												"inverted_ccvi" : 52.75,
+												"chance_of_infection" : 12.59,
+												"chance_of_death" : 1.24,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"asian" : 											{
+												"population" : 75741,
+												"inverted_ccvi" : 61.68,
+												"chance_of_infection" : 12.470000000000001,
+												"chance_of_death" : 0.93,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"pacific" : 											{
+												"population" : 3729,
+												"inverted_ccvi" : 54.920000000000002,
+												"chance_of_infection" : 37.509999999999998,
+												"chance_of_death" : 1.82,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"hispanic" : 											{
+												"population" : 188311,
+												"inverted_ccvi" : 50.100000000000001,
+												"chance_of_infection" : 15.050000000000001,
+												"chance_of_death" : 0.69,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+
+										}
+,
+										"maine" : 										{
+											"white" : 											{
+												"population" : 1259522,
+												"inverted_ccvi" : 80.239999999999995,
+												"chance_of_infection" : 8.029999999999999,
+												"chance_of_death" : 1.5,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"black" : 											{
+												"population" : 18468,
+												"inverted_ccvi" : 65.180000000000007,
+												"chance_of_infection" : 48.770000000000003,
+												"chance_of_death" : 0.43,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"native" : 											{
+												"population" : 8660,
+												"inverted_ccvi" : 72.269999999999996,
+												"chance_of_infection" : 4.65,
+												"chance_of_death" : 0.0,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"asian" : 											{
+												"population" : 15109,
+												"inverted_ccvi" : 74.939999999999998,
+												"chance_of_infection" : 10.32,
+												"chance_of_death" : 0.0,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"pacific" : 											{
+												"population" : 396,
+												"inverted_ccvi" : 80.239999999999995,
+												"chance_of_infection" : 16.940000000000001,
+												"chance_of_death" : 0.0,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"hispanic" : 											{
+												"population" : 22100,
+												"inverted_ccvi" : 76.469999999999999,
+												"chance_of_infection" : 11.279999999999999,
+												"chance_of_death" : 0.67,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+
+										}
+,
+										"minnesota" : 										{
+											"white" : 											{
+												"population" : 4607034,
+												"inverted_ccvi" : 76.370000000000005,
+												"chance_of_infection" : 9.57,
+												"chance_of_death" : 1.6,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"black" : 											{
+												"population" : 355881,
+												"inverted_ccvi" : 50.93,
+												"chance_of_infection" : 15.42,
+												"chance_of_death" : 0.81,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"native" : 											{
+												"population" : 57814,
+												"inverted_ccvi" : 54.270000000000003,
+												"chance_of_infection" : 11.01,
+												"chance_of_death" : 1.82,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"asian" : 											{
+												"population" : 268044,
+												"inverted_ccvi" : 60.07,
+												"chance_of_infection" : 10.640000000000001,
+												"chance_of_death" : 1.09,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"pacific" : 											{
+												"population" : 2194,
+												"inverted_ccvi" : 64.609999999999999,
+												"chance_of_infection" : 33.07,
+												"chance_of_death" : 1.12,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"hispanic" : 											{
+												"population" : 299417,
+												"inverted_ccvi" : 56.43,
+												"chance_of_infection" : 20.300000000000001,
+												"chance_of_death" : 0.44,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+
+										}
+,
+										"missouri" : 										{
+											"white" : 											{
+												"population" : 5015890,
+												"inverted_ccvi" : 56.229999999999997,
+												"chance_of_infection" : 18.82,
+												"chance_of_death" : 1.64,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"black" : 											{
+												"population" : 701334,
+												"inverted_ccvi" : 35.469999999999999,
+												"chance_of_infection" : 24.93,
+												"chance_of_death" : 2.02,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"native" : 											{
+												"population" : 27084,
+												"inverted_ccvi" : 47.670000000000002,
+												"chance_of_infection" : 13.039999999999999,
+												"chance_of_death" : 1.29,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"asian" : 											{
+												"population" : 120654,
+												"inverted_ccvi" : 59.75,
+												"chance_of_infection" : 13.66,
+												"chance_of_death" : 1.16,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"pacific" : 											{
+												"population" : 8231,
+												"inverted_ccvi" : 44.939999999999998,
+												"chance_of_infection" : 1.84,
+												"chance_of_death" : 3.33,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"hispanic" : 											{
+												"population" : 254791,
+												"inverted_ccvi" : 44.659999999999997,
+												"chance_of_infection" : 27.719999999999999,
+												"chance_of_death" : 0.79,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+
+										}
+,
+										"nebraska" : 										{
+											"white" : 											{
+												"population" : 1661061,
+												"inverted_ccvi" : 76.640000000000001,
+												"chance_of_infection" : 11.210000000000001,
+												"chance_of_death" : 1.27,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"black" : 											{
+												"population" : 91744,
+												"inverted_ccvi" : 53.670000000000002,
+												"chance_of_infection" : 10.380000000000001,
+												"chance_of_death" : 1.3,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"native" : 											{
+												"population" : 17588,
+												"inverted_ccvi" : 59.600000000000001,
+												"chance_of_infection" : 13.15,
+												"chance_of_death" : 2.12,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"asian" : 											{
+												"population" : 45075,
+												"inverted_ccvi" : 67.560000000000002,
+												"chance_of_infection" : 11.5,
+												"chance_of_death" : 0.95,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"pacific" : 											{
+												"population" : 1327,
+												"inverted_ccvi" : 69.040000000000006,
+												"chance_of_infection" : 32.32,
+												"chance_of_death" : 0.5,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"hispanic" : 											{
+												"population" : 207731,
+												"inverted_ccvi" : 56.060000000000002,
+												"chance_of_infection" : 21.440000000000001,
+												"chance_of_death" : 0.68,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+
+										}
+,
+										"oregon" : 										{
+											"white" : 											{
+												"population" : 3480920,
+												"inverted_ccvi" : 59.619999999999997,
+												"chance_of_infection" : 6.27,
+												"chance_of_death" : 1.87,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"black" : 											{
+												"population" : 78679,
+												"inverted_ccvi" : 49.039999999999999,
+												"chance_of_infection" : 14.82,
+												"chance_of_death" : 1.29,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"native" : 											{
+												"population" : 48060,
+												"inverted_ccvi" : 50.350000000000001,
+												"chance_of_infection" : 18.629999999999999,
+												"chance_of_death" : 1.16,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"asian" : 											{
+												"population" : 180580,
+												"inverted_ccvi" : 55.740000000000002,
+												"chance_of_infection" : 8.550000000000001,
+												"chance_of_death" : 1.19,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"pacific" : 											{
+												"population" : 16625,
+												"inverted_ccvi" : 46.450000000000003,
+												"chance_of_infection" : 26.969999999999999,
+												"chance_of_death" : 1.3,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+,
+											"hispanic" : 											{
+												"population" : 537217,
+												"inverted_ccvi" : 46.240000000000002,
+												"chance_of_infection" : 24.77,
+												"chance_of_death" : 0.47,
+												"generated_cases" : 0,
+												"generated_deaths" : 0
+											}
+
+										}
+
+									}
+,
+									"id" : "obj-35",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 4,
+									"outlettype" : [ "dictionary", "", "", "" ],
+									"patching_rect" : [ 46.0, 107.0, 151.0, 22.0 ],
+									"saved_object_attributes" : 									{
+										"embed" : 1,
+										"parameter_enable" : 0,
+										"parameter_mappable" : 0
+									}
+,
+									"text" : "dict weathering @embed 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-20",
 									"linecount" : 2,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 351.5, 329.125, 141.0, 33.0 ],
+									"patching_rect" : [ 402.5, 306.125, 141.0, 33.0 ],
 									"text" : "dictionaries with all data for each demographic"
 								}
 
@@ -357,7 +1325,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 395.5, 98.0, 149.0, 60.0 ],
+									"patching_rect" : [ 361.0, 87.625, 149.0, 60.0 ],
 									"text" : "^generate nondeterministic audio according to probabilities set by extracted data"
 								}
 
@@ -962,7 +1930,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 310.0, 281.0, 47.0, 22.0 ],
+									"patching_rect" : [ 361.0, 258.0, 47.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -1574,7 +2542,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 255.0, 281.0, 53.0, 22.0 ],
+									"patching_rect" : [ 306.0, 258.0, 53.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -2186,7 +3154,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 202.0, 281.0, 51.0, 22.0 ],
+									"patching_rect" : [ 253.0, 258.0, 51.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -2798,7 +3766,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 137.0, 281.0, 63.0, 22.0 ],
+									"patching_rect" : [ 188.0, 258.0, 63.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -3410,7 +4378,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 88.0, 281.0, 47.0, 22.0 ],
+									"patching_rect" : [ 139.0, 258.0, 47.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -14997,7 +15965,7 @@
 																					"numoutlets" : 1,
 																					"outlettype" : [ "" ],
 																					"patching_rect" : [ 176.545454545454561, 194.0, 398.0, 22.0 ],
-																					"text" : "6 1 1366, 6 2 2493, 6 3 2772, 6 4 1304, 6 5 184, 6 6 1882"
+																					"text" : "6 1 659, 6 2 1121, 6 3 1897, 6 4 798, 6 5 4659, 6 6 1019"
 																				}
 
 																			}
@@ -17715,7 +18683,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 395.5, 74.0, 99.0, 22.0 ],
+									"patching_rect" : [ 361.0, 63.625, 99.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -17735,7 +18703,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 310.0, 336.0, 30.0, 30.0 ]
+									"patching_rect" : [ 361.0, 313.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -17747,7 +18715,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 255.0, 336.0, 30.0, 30.0 ]
+									"patching_rect" : [ 306.0, 313.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -17759,7 +18727,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 202.0, 336.0, 30.0, 30.0 ]
+									"patching_rect" : [ 253.0, 313.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -17771,7 +18739,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 137.0, 336.0, 30.0, 30.0 ]
+									"patching_rect" : [ 188.0, 313.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -17783,7 +18751,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 88.0, 336.0, 30.0, 30.0 ]
+									"patching_rect" : [ 139.0, 313.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -17795,7 +18763,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 39.0, 336.0, 30.0, 30.0 ]
+									"patching_rect" : [ 90.0, 313.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -17806,7 +18774,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 365.5, 271.625, 182.0, 33.0 ],
+									"patching_rect" : [ 416.5, 248.625, 179.0, 33.0 ],
 									"text" : "extract and route individual data points for each demographic"
 								}
 
@@ -18411,7 +19379,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 39.0, 281.0, 47.0, 22.0 ],
+									"patching_rect" : [ 90.0, 258.0, 47.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -18430,8 +19398,8 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 248.5, 98.0, 129.0, 47.0 ],
-									"text" : "retrieve data from api sorted by racial/ethnic demographic"
+									"patching_rect" : [ 236.5, 63.625, 113.0, 47.0 ],
+									"text" : "retrieve data from json file embedded in dict object"
 								}
 
 							}
@@ -18442,7 +19410,7 @@
 									"numinlets" : 7,
 									"numoutlets" : 7,
 									"outlettype" : [ "", "", "", "", "", "", "" ],
-									"patching_rect" : [ 39.0, 218.0, 251.0, 22.0 ],
+									"patching_rect" : [ 90.0, 195.0, 251.0, 22.0 ],
 									"text" : "route asian black hispanic native pacific white"
 								}
 
@@ -18454,68 +19422,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 39.0, 194.0, 47.0, 22.0 ],
+									"patching_rect" : [ 90.0, 171.0, 47.0, 22.0 ],
 									"text" : "dict.iter"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-6",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "dictionary" ],
-									"patching_rect" : [ 39.0, 170.0, 88.0, 22.0 ],
-									"text" : "dict.deserialize"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-4",
-									"maxclass" : "newobj",
-									"numinlets" : 2,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 39.0, 146.0, 65.0, 22.0 ],
-									"text" : "route body"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-3",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 39.0, 122.0, 47.0, 22.0 ],
-									"text" : "dict.iter"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-2",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 39.0, 74.0, 325.0, 22.0 ],
-									"text" : "sprintf get https://iiviiiii-2020-weathering.herokuapp.com/%s"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-7",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "dictionary", "" ],
-									"patching_rect" : [ 39.0, 98.0, 45.0, 22.0 ],
-									"text" : "maxurl"
 								}
 
 							}
@@ -18528,7 +19436,25 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 39.0, 22.0, 30.0, 30.0 ]
+									"patching_rect" : [ 46.0, 22.0, 30.0, 30.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"angle" : 270.0,
+									"background" : 1,
+									"bgcolor" : [ 0.8, 0.8, 0.8, 0.0 ],
+									"border" : 1,
+									"bordercolor" : [ 0.482352941176471, 0.482352941176471, 0.482352941176471, 1.0 ],
+									"id" : "obj-9",
+									"maxclass" : "panel",
+									"mode" : 0,
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 37.0, 63.625, 312.5, 162.75 ],
+									"proportion" : 0.5,
+									"rounded" : 20
 								}
 
 							}
@@ -18544,7 +19470,7 @@
 									"mode" : 0,
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 32.0, 329.125, 460.5, 44.75 ],
+									"patching_rect" : [ 83.0, 306.125, 460.5, 44.75 ],
 									"proportion" : 0.5,
 									"rounded" : 20
 								}
@@ -18562,25 +19488,7 @@
 									"mode" : 0,
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 32.0, 271.625, 512.5, 41.75 ],
-									"proportion" : 0.5,
-									"rounded" : 20
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"angle" : 270.0,
-									"background" : 1,
-									"bgcolor" : [ 0.8, 0.8, 0.8, 0.0 ],
-									"border" : 1,
-									"bordercolor" : [ 0.482352941176471, 0.482352941176471, 0.482352941176471, 1.0 ],
-									"id" : "obj-9",
-									"maxclass" : "panel",
-									"mode" : 0,
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 32.0, 64.625, 345.5, 185.75 ],
+									"patching_rect" : [ 83.0, 248.625, 512.5, 41.75 ],
 									"proportion" : 0.5,
 									"rounded" : 20
 								}
@@ -18589,7 +19497,17 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
-									"destination" : [ "obj-2", 0 ],
+									"destination" : [ "obj-33", 0 ],
+									"order" : 1,
+									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-34", 1 ],
+									"midpoints" : [ 55.5, 76.0, 223.0, 76.0, 223.0, 136.0, 116.5, 136.0 ],
+									"order" : 0,
 									"source" : [ "obj-1", 0 ]
 								}
 
@@ -18626,13 +19544,6 @@
 								"patchline" : 								{
 									"destination" : [ "obj-31", 0 ],
 									"source" : [ "obj-16", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-7", 0 ],
-									"source" : [ "obj-2", 0 ]
 								}
 
 							}
@@ -18687,29 +19598,22 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-4", 0 ],
-									"source" : [ "obj-3", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-6", 0 ],
-									"source" : [ "obj-4", 0 ]
+									"destination" : [ "obj-35", 0 ],
+									"source" : [ "obj-33", 0 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-23", 0 ],
-									"source" : [ "obj-6", 0 ]
+									"source" : [ "obj-34", 0 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-3", 0 ],
-									"source" : [ "obj-7", 0 ]
+									"destination" : [ "obj-34", 0 ],
+									"source" : [ "obj-35", 1 ]
 								}
 
 							}
@@ -18797,6 +19701,15 @@
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-42", 0 ],
+					"hidden" : 1,
+					"midpoints" : [ 653.0, 130.0, 41.5, 130.0 ],
+					"source" : [ "obj-1", 1 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-29", 0 ],
 					"hidden" : 1,
@@ -18910,15 +19823,6 @@
 					"destination" : [ "obj-41", 0 ],
 					"hidden" : 1,
 					"source" : [ "obj-42", 4 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-42", 0 ],
-					"hidden" : 1,
-					"midpoints" : [ 653.0, 130.0, 41.5, 130.0 ],
-					"source" : [ "obj-5", 1 ]
 				}
 
 			}
