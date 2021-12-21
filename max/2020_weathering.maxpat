@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 194.0, 113.0, 1066.0, 345.0 ],
+		"rect" : [ 274.0, 399.0, 1066.0, 345.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -15965,7 +15965,7 @@
 																					"numoutlets" : 1,
 																					"outlettype" : [ "" ],
 																					"patching_rect" : [ 176.545454545454561, 194.0, 398.0, 22.0 ],
-																					"text" : "6 1 659, 6 2 1121, 6 3 1897, 6 4 798, 6 5 4659, 6 6 1019"
+																					"text" : "6 1 659, 6 2 1121, 6 3 1897, 6 4 798, 6 5 4659, 6 6 866"
 																				}
 
 																			}
@@ -16507,6 +16507,16 @@
 , 																			{
 																				"patchline" : 																				{
 																					"destination" : [ "obj-13", 5 ],
+																					"order" : 0,
+																					"source" : [ "obj-4", 0 ]
+																				}
+
+																			}
+, 																			{
+																				"patchline" : 																				{
+																					"destination" : [ "obj-16", 0 ],
+																					"midpoints" : [ 324.5, 139.0, 203.0, 139.0, 203.0, 68.0, 165.045454545454561, 68.0 ],
+																					"order" : 1,
 																					"source" : [ "obj-4", 0 ]
 																				}
 
@@ -16605,16 +16615,6 @@
 , 																			{
 																				"patchline" : 																				{
 																					"destination" : [ "obj-13", 11 ],
-																					"order" : 0,
-																					"source" : [ "obj-8", 0 ]
-																				}
-
-																			}
-, 																			{
-																				"patchline" : 																				{
-																					"destination" : [ "obj-16", 0 ],
-																					"midpoints" : [ 480.5, 134.0, 529.0, 134.0, 529.0, 68.0, 165.045454545454561, 68.0 ],
-																					"order" : 1,
 																					"source" : [ "obj-8", 0 ]
 																				}
 
@@ -18774,7 +18774,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 416.5, 248.625, 179.0, 33.0 ],
+									"patching_rect" : [ 416.5, 248.625, 182.0, 33.0 ],
 									"text" : "extract and route individual data points for each demographic"
 								}
 
