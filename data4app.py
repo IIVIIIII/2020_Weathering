@@ -26,6 +26,8 @@ def get_data(here):
     spreadProbs = [0,0,0,12]
     # symptomatic cases that have occured
     sympCount = 0
+    # deaths that have occured
+    deathCount = 0
     # case count threshold for when new r0 shoud be calculated
     thresh = 0
     # nth threshold
@@ -45,15 +47,16 @@ def get_data(here):
         'time': [],
         'demo': [],
         'note': [],
-        'death': []
+        'death': [],
+        'n': [],
     }
 
 
 
 
     # function to determine how many cases correspond to a particular threshold
-    def nthThresh(n,t):
-        return 100 * n + t
+    def nthThresh(n,thresh):
+        return 100 * n + thresh
 
     # function to adjust spreadProbs weights and calculate r0 for corresponding threshold
     def thisThresh():
@@ -73,7 +76,7 @@ def get_data(here):
             spreadProbs[3] -= 1
             spreadProbs[0] += 1
         r0 = (spreadProbs[1] + 2*spreadProbs[2] + 3*spreadProbs[3]) / sum(spreadProbs)
-        
+
     # function to select rescaled incubation period as a delay in milliseconds.
     def incubate(n):
         if n == 1:  
@@ -94,7 +97,7 @@ def get_data(here):
         else:
             sub = random.choice([6,8,5,7])
             return random.randint(0, sub*40)*2000/sub
-        
+
     # function to select a value based on a probability distribution array
     def select(probsArray):
         return random.choices(list(range(len(probsArray))),weights=probsArray)[0]
@@ -104,65 +107,75 @@ def get_data(here):
         return random.choices([0,1], weights=[100-prob, prob])[0]
 
     # function to generate midi notes
-    def midi(t):
+    def midi(trans, death):
         note = random.choice(midiNotes)
-        return note + t
+        return note + trans - death
 
 
 
 
     while len(times) > 0:
+    
+        # determine how much time has elapse since beginning of piece
+        now = sorted(times)[0]
         
-        times = sorted(times)
-        
-        # add current case to total # of cases
+        # if symptomatic add case info to weathering
+        if decide(0) == 0:
+
+            # add current case to total # of cases
             # (only sympotmatic cases adjust threshold)
-        sympCount += 1
-        
-        # if case count is at or over threshold number
-        if sympCount > nthThresh(n, thresh):
-            # calculate new threshold
-            thresh = nthThresh(n, thresh)
-            # adjust spreadProbs weights and calculate r0 for corresponding threshold
-            thisThresh()
-            # add one to threshold n value
-            n += 1
+            sympCount += 1
+            
+            # if case count is at or over threshold number
+            if sympCount > nthThresh(n, thresh):
+                # calculate new threshold
+                thresh = nthThresh(n, thresh)
+                # adjust spreadProbs weights and calculate r0 for corresponding threshold
+                thisThresh()
+                # add one to threshold n value
+                n += 1
+            
 
-        # decide how many people the current case infects and add them to more
-        for i in range(select(spreadProbs)): 
+            delay = incubate(n)
+            
+            time = now + delay
+            weathering['time'].append(time)
+
             
             
-    #         # decide if asymptomatic or not
-    #         if decide(40) == 0:
-
             # select which demographic the current case belongs to
             demo = select(infectProbs)
             weathering['demo'].append(demo)
-
-            # select which note
-            weathering['note'].append(midi(0))
-
-            # select incubation period (delay time)
-            delay = incubate(n)
-            
-            time = delay + times[0]
-            
-            weathering['time'].append(time)
-            
-            times.append(time)
 
             # decide/record if case results in death or not
             death = decide(deathProbs[demo])
             weathering['death'].append(death)
 
-        # remove current case from timestaps of remaining cases
+            # select which note
+            weathering['note'].append(midi(0, death))
+
+            weathering['n'].append(n)
+        
+    
+
+        # decide how many people the current case infects and add them to more
+        for i in range(select(spreadProbs)):
+            
+    #         # select incubation period (delay time)
+    #         delay = incubate(n)
+            
+    #         # determine time elapsed since beginning and append to times list
+    #         time = now + delay
+    #         times.append(time)
+            times.append(time)
+
+        # remove current case from timestamps of remaining cases
         times.pop(0)
     
     
 
-    result = list(zip(weathering['time'], weathering['demo'], weathering['note'], weathering['death']))
+    result = sorted(list(zip(weathering['time'], weathering['demo'], weathering['note'], weathering['death'], weathering['n'])))
 
-    result = sorted(result)
 
 
 
@@ -172,12 +185,13 @@ def get_data(here):
 
     for time in result:
         
+
         if time[0] != ms:
             infections += 1
             timing[infections] = {'demoNotes': [time[1], time[2], time[3]]}
             timing[infections]['delay'] = time[0] - ms
             ms = time[0]
-            
+
         else:
             for i in range(1,4):
                 timing[infections]['demoNotes'].append(time[i])
