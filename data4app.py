@@ -236,6 +236,6 @@ def get_data(here):
             # append current case's demographic, midi note, and placeholder for shared video stream to demoNotes key
             timings[timing]['demoNotes'].extend(list(case[1:4])+["stream"])
 
-    return timing
+    return timings
 
 get_data('Missouri')
