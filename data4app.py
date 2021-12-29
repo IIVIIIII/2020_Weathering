@@ -180,7 +180,7 @@ def get_data(here):
     
 
     # zip all data into a list of tuples
-    result = sorted(list(zip(weathering['time'], weathering['demo'], weathering['note'], weathering['death'])))
+    result = sorted(list(zip(weathering['time'], weathering['demo'], weathering['death'], weathering['note'])))
 
 
 
