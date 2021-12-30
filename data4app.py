@@ -110,6 +110,7 @@ def get_data(here):
             trans += t
         else:
             trans += t*random.choice([-1,1])
+        return trans
 
     # function to generate midi notes
     def midi(trans, death):
