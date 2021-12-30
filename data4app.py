@@ -138,7 +138,7 @@ def get_data(here):
             
             # 50 new symptomatic cases result in transposition of avaliable notes
             if sympCount % 50 == 0:
-                newTrans(trans)
+                trans = newTrans(trans)
 
             # if symptomatic case count is at or over current threshold number
             if sympCount > nthThresh(n, thresh):
