@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 736.0, 418.0, 1066.0, 345.0 ],
+		"rect" : [ 63.0, 385.0, 1066.0, 345.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -370,7 +370,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 1134.0, 133.0, 406.0, 640.0 ],
+						"rect" : [ 1352.0, 443.0, 406.0, 640.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -398,14 +398,25 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-11",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 131.0, 69.0, 29.5, 22.0 ],
+									"text" : "0"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-17",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 131.0, 69.0, 45.0, 22.0 ],
+									"patching_rect" : [ 177.5, 52.0, 45.0, 22.0 ],
 									"text" : "s reset"
 								}
 
@@ -512,7 +523,7 @@
 										}
 ,
 										"classnamespace" : "box",
-										"rect" : [ 1118.0, 523.0, 429.0, 329.0 ],
+										"rect" : [ 863.0, 319.0, 429.0, 329.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -540,7 +551,6 @@
 										"style" : "",
 										"subpatcher_template" : "",
 										"assistshowspatchername" : 0,
-										"visible" : 1,
 										"boxes" : [ 											{
 												"box" : 												{
 													"id" : "obj-27",
@@ -646,15 +656,14 @@
 																		"style" : "",
 																		"subpatcher_template" : "",
 																		"assistshowspatchername" : 0,
-																		"visible" : 1,
 																		"boxes" : [ 																			{
 																				"box" : 																				{
 																					"id" : "obj-9",
 																					"maxclass" : "newobj",
 																					"numinlets" : 1,
 																					"numoutlets" : 0,
-																					"patching_rect" : [ 38.0, 287.0, 137.0, 22.0 ],
-																					"text" : "udpsend localHost 7000"
+																					"patching_rect" : [ 38.0, 287.0, 151.0, 22.0 ],
+																					"text" : "udpsend 192.168.1.1 7001"
 																				}
 
 																			}
@@ -1231,7 +1240,7 @@
 														}
 ,
 														"classnamespace" : "box",
-														"rect" : [ 903.0, 635.0, 443.0, 321.0 ],
+														"rect" : [ 903.0, 634.0, 443.0, 321.0 ],
 														"bglocked" : 0,
 														"openinpresentation" : 0,
 														"default_fontsize" : 12.0,
@@ -1290,7 +1299,7 @@
 																		}
 ,
 																		"classnamespace" : "box",
-																		"rect" : [ 504.0, 170.0, 311.0, 332.0 ],
+																		"rect" : [ 183.0, 190.0, 311.0, 332.0 ],
 																		"bglocked" : 0,
 																		"openinpresentation" : 0,
 																		"default_fontsize" : 12.0,
@@ -1318,15 +1327,14 @@
 																		"style" : "",
 																		"subpatcher_template" : "",
 																		"assistshowspatchername" : 0,
-																		"visible" : 1,
 																		"boxes" : [ 																			{
 																				"box" : 																				{
 																					"id" : "obj-9",
 																					"maxclass" : "newobj",
 																					"numinlets" : 1,
 																					"numoutlets" : 0,
-																					"patching_rect" : [ 38.0, 284.0, 137.0, 22.0 ],
-																					"text" : "udpsend localHost 7000"
+																					"patching_rect" : [ 38.0, 284.0, 151.0, 22.0 ],
+																					"text" : "udpsend 192.168.1.1 7000"
 																				}
 
 																			}
@@ -1990,15 +1998,14 @@
 																		"style" : "",
 																		"subpatcher_template" : "",
 																		"assistshowspatchername" : 0,
-																		"visible" : 1,
 																		"boxes" : [ 																			{
 																				"box" : 																				{
 																					"id" : "obj-9",
 																					"maxclass" : "newobj",
 																					"numinlets" : 1,
 																					"numoutlets" : 0,
-																					"patching_rect" : [ 38.0, 287.0, 137.0, 22.0 ],
-																					"text" : "udpsend localHost 7000"
+																					"patching_rect" : [ 38.0, 287.0, 158.0, 22.0 ],
+																					"text" : "udpsend 192.168.4.38 7001"
 																				}
 
 																			}
@@ -2662,7 +2669,6 @@
 																		"style" : "",
 																		"subpatcher_template" : "",
 																		"assistshowspatchername" : 0,
-																		"visible" : 1,
 																		"boxes" : [ 																			{
 																				"box" : 																				{
 																					"id" : "obj-9",
@@ -4049,7 +4055,7 @@
 																		}
 ,
 																		"classnamespace" : "box",
-																		"rect" : [ 599.0, 545.0, 311.0, 332.0 ],
+																		"rect" : [ 634.0, 633.0, 311.0, 332.0 ],
 																		"bglocked" : 0,
 																		"openinpresentation" : 0,
 																		"default_fontsize" : 12.0,
@@ -4083,7 +4089,7 @@
 																					"maxclass" : "newobj",
 																					"numinlets" : 1,
 																					"numoutlets" : 0,
-																					"patching_rect" : [ 38.0, 264.0, 60.0, 22.0 ],
+																					"patching_rect" : [ 38.0, 278.0, 60.0, 22.0 ],
 																					"text" : "s infect_a"
 																				}
 
@@ -6087,7 +6093,7 @@
 												"box" : 												{
 													"data" : 													{
 														"http_method" : "get",
-														"url" : "https://iiviiiii-2020-weathering.herokuapp.com/iowa",
+														"url" : "https://iiviiiii-2020-weathering.herokuapp.com/california",
 														"response_dict" : "data1",
 														"parse_type" : "json"
 													}
@@ -6295,7 +6301,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 94.833333333333314, 438.5, 280.833333333333314, 22.0 ],
-									"text" : "1 45 0 stream"
+									"text" : "4 85 0 stream"
 								}
 
 							}
@@ -6430,6 +6436,13 @@
 								"patchline" : 								{
 									"destination" : [ "obj-16", 0 ],
 									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-25", 0 ],
+									"source" : [ "obj-11", 0 ]
 								}
 
 							}
