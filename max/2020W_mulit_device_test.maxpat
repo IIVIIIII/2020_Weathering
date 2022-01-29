@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 209.0, 1066.0, 345.0 ],
+		"rect" : [ 736.0, 418.0, 1066.0, 345.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -370,7 +370,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 1205.0, 297.0, 406.0, 640.0 ],
+						"rect" : [ 1134.0, 133.0, 406.0, 640.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -398,6 +398,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-17",
@@ -511,7 +512,7 @@
 										}
 ,
 										"classnamespace" : "box",
-										"rect" : [ 867.0, 152.0, 429.0, 329.0 ],
+										"rect" : [ 1118.0, 523.0, 429.0, 329.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -539,6 +540,7 @@
 										"style" : "",
 										"subpatcher_template" : "",
 										"assistshowspatchername" : 0,
+										"visible" : 1,
 										"boxes" : [ 											{
 												"box" : 												{
 													"id" : "obj-27",
@@ -616,7 +618,7 @@
 																		}
 ,
 																		"classnamespace" : "box",
-																		"rect" : [ 444.0, 539.0, 311.0, 332.0 ],
+																		"rect" : [ 692.0, 166.0, 311.0, 332.0 ],
 																		"bglocked" : 0,
 																		"openinpresentation" : 0,
 																		"default_fontsize" : 12.0,
@@ -644,14 +646,15 @@
 																		"style" : "",
 																		"subpatcher_template" : "",
 																		"assistshowspatchername" : 0,
+																		"visible" : 1,
 																		"boxes" : [ 																			{
 																				"box" : 																				{
-																					"id" : "obj-5",
+																					"id" : "obj-9",
 																					"maxclass" : "newobj",
 																					"numinlets" : 1,
 																					"numoutlets" : 0,
-																					"patching_rect" : [ 38.0, 264.0, 62.0, 22.0 ],
-																					"text" : "s infect_w"
+																					"patching_rect" : [ 38.0, 287.0, 137.0, 22.0 ],
+																					"text" : "udpsend localHost 7000"
 																				}
 
 																			}
@@ -903,7 +906,7 @@
 																			}
 , 																			{
 																				"patchline" : 																				{
-																					"destination" : [ "obj-5", 0 ],
+																					"destination" : [ "obj-9", 0 ],
 																					"source" : [ "obj-4", 0 ]
 																				}
 
@@ -1228,7 +1231,7 @@
 														}
 ,
 														"classnamespace" : "box",
-														"rect" : [ 82.0, 206.0, 443.0, 321.0 ],
+														"rect" : [ 903.0, 635.0, 443.0, 321.0 ],
 														"bglocked" : 0,
 														"openinpresentation" : 0,
 														"default_fontsize" : 12.0,
@@ -1287,7 +1290,7 @@
 																		}
 ,
 																		"classnamespace" : "box",
-																		"rect" : [ 444.0, 539.0, 311.0, 332.0 ],
+																		"rect" : [ 504.0, 170.0, 311.0, 332.0 ],
 																		"bglocked" : 0,
 																		"openinpresentation" : 0,
 																		"default_fontsize" : 12.0,
@@ -1315,14 +1318,15 @@
 																		"style" : "",
 																		"subpatcher_template" : "",
 																		"assistshowspatchername" : 0,
+																		"visible" : 1,
 																		"boxes" : [ 																			{
 																				"box" : 																				{
-																					"id" : "obj-5",
+																					"id" : "obj-9",
 																					"maxclass" : "newobj",
 																					"numinlets" : 1,
 																					"numoutlets" : 0,
-																					"patching_rect" : [ 38.0, 264.0, 60.0, 22.0 ],
-																					"text" : "s infect_p"
+																					"patching_rect" : [ 38.0, 284.0, 137.0, 22.0 ],
+																					"text" : "udpsend localHost 7000"
 																				}
 
 																			}
@@ -1574,7 +1578,7 @@
 																			}
 , 																			{
 																				"patchline" : 																				{
-																					"destination" : [ "obj-5", 0 ],
+																					"destination" : [ "obj-9", 0 ],
 																					"source" : [ "obj-4", 0 ]
 																				}
 
@@ -1899,7 +1903,7 @@
 														}
 ,
 														"classnamespace" : "box",
-														"rect" : [ 82.0, 206.0, 443.0, 321.0 ],
+														"rect" : [ 258.0, 595.0, 443.0, 321.0 ],
 														"bglocked" : 0,
 														"openinpresentation" : 0,
 														"default_fontsize" : 12.0,
@@ -1958,7 +1962,7 @@
 																		}
 ,
 																		"classnamespace" : "box",
-																		"rect" : [ 599.0, 545.0, 311.0, 332.0 ],
+																		"rect" : [ 297.0, 171.0, 311.0, 332.0 ],
 																		"bglocked" : 0,
 																		"openinpresentation" : 0,
 																		"default_fontsize" : 12.0,
@@ -1986,14 +1990,15 @@
 																		"style" : "",
 																		"subpatcher_template" : "",
 																		"assistshowspatchername" : 0,
+																		"visible" : 1,
 																		"boxes" : [ 																			{
 																				"box" : 																				{
-																					"id" : "obj-5",
+																					"id" : "obj-9",
 																					"maxclass" : "newobj",
 																					"numinlets" : 1,
 																					"numoutlets" : 0,
-																					"patching_rect" : [ 38.0, 264.0, 60.0, 22.0 ],
-																					"text" : "s infect_n"
+																					"patching_rect" : [ 38.0, 287.0, 137.0, 22.0 ],
+																					"text" : "udpsend localHost 7000"
 																				}
 
 																			}
@@ -2245,7 +2250,7 @@
 																			}
 , 																			{
 																				"patchline" : 																				{
-																					"destination" : [ "obj-5", 0 ],
+																					"destination" : [ "obj-9", 0 ],
 																					"source" : [ "obj-4", 0 ]
 																				}
 
@@ -2570,7 +2575,7 @@
 														}
 ,
 														"classnamespace" : "box",
-														"rect" : [ 82.0, 206.0, 443.0, 321.0 ],
+														"rect" : [ 87.0, 201.0, 443.0, 321.0 ],
 														"bglocked" : 0,
 														"openinpresentation" : 0,
 														"default_fontsize" : 12.0,
@@ -2629,7 +2634,7 @@
 																		}
 ,
 																		"classnamespace" : "box",
-																		"rect" : [ 599.0, 545.0, 311.0, 332.0 ],
+																		"rect" : [ 55.0, 173.0, 311.0, 332.0 ],
 																		"bglocked" : 0,
 																		"openinpresentation" : 0,
 																		"default_fontsize" : 12.0,
@@ -2657,14 +2662,15 @@
 																		"style" : "",
 																		"subpatcher_template" : "",
 																		"assistshowspatchername" : 0,
+																		"visible" : 1,
 																		"boxes" : [ 																			{
 																				"box" : 																				{
-																					"id" : "obj-5",
+																					"id" : "obj-9",
 																					"maxclass" : "newobj",
 																					"numinlets" : 1,
 																					"numoutlets" : 0,
-																					"patching_rect" : [ 38.0, 264.0, 60.0, 22.0 ],
-																					"text" : "s infect_h"
+																					"patching_rect" : [ 38.0, 283.0, 158.0, 22.0 ],
+																					"text" : "udpsend 192.168.4.38 7000"
 																				}
 
 																			}
@@ -2916,7 +2922,7 @@
 																			}
 , 																			{
 																				"patchline" : 																				{
-																					"destination" : [ "obj-5", 0 ],
+																					"destination" : [ "obj-9", 0 ],
 																					"source" : [ "obj-4", 0 ]
 																				}
 
@@ -6081,7 +6087,7 @@
 												"box" : 												{
 													"data" : 													{
 														"http_method" : "get",
-														"url" : "https://iiviiiii-2020-weathering.herokuapp.com/california",
+														"url" : "https://iiviiiii-2020-weathering.herokuapp.com/iowa",
 														"response_dict" : "data1",
 														"parse_type" : "json"
 													}
