@@ -120,8 +120,6 @@ def get_data(here):
 
 
 
-
-
     # incubation period of first infection
     times.append(incubate(n))
 
@@ -236,6 +234,27 @@ def get_data(here):
 
             # append current case's demographic, midi note, and placeholder for shared video stream to demoNotes key
             timings[timing]['demoNotes'].extend(list(case[1:4])+["stream"])
+
+
+
+
+    # function to make timings relevant only to assigned demographic
+    def each_demo(a, b):
+        demoNotes = []
+        delay = timings[a]['delay']
+        cases = timings[a]['demoNotes']
+        stream = cases[3]
+        for i in range(int(len(cases)/4)):
+            if cases[i*4: ((i+1)*4)-1][0] == b:
+                demoNotes.extend(cases[(i*4)+1: ((i+1)*4)-1])
+        return [a, {'demoNotes': demoNotes, 'delay': delay, 'stream': stream}]
+
+    # dictionary to hold timings for each demogaphic
+    demogs = {}
+
+    # get timings for each demographic and add to demogs
+    for i in range(6):
+        demogs[i] = dict(map(each_demo, timings, [i]*len(timings)))
 
     return timings
 
