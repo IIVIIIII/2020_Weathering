@@ -3,7 +3,7 @@ import random
 import json
 
 
-def get_data(here):
+def get_data(here, them):
 
     # select desired state convert state and convert to proper format
     state = here.replace(" ", "").lower()
@@ -256,6 +256,4 @@ def get_data(here):
     for i in range(6):
         demogs[i] = dict(map(each_demo, timings, [i]*len(timings)))
 
-    return demogs
-
-get_data('Missouri')
+    return demogs[int(them)]
