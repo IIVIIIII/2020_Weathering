@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 513.0, 155.0, 410.0, 631.0 ],
+		"rect" : [ 458.0, 230.0, 410.0, 631.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -423,7 +423,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-10",
@@ -477,7 +476,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 86.166666666666686, 185.0, 45.0, 22.0 ],
+									"patching_rect" : [ 99.000000000000028, 185.0, 45.0, 22.0 ],
 									"text" : "s mute"
 								}
 
@@ -489,7 +488,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 37.166666666666686, 159.0, 98.0, 22.0 ],
+									"patching_rect" : [ 50.000000000000021, 159.0, 98.0, 22.0 ],
 									"text" : "route delay mute"
 								}
 
@@ -536,7 +535,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 37.166666666666686, 185.0, 47.0, 22.0 ],
+									"patching_rect" : [ 50.000000000000021, 185.0, 47.0, 22.0 ],
 									"text" : "s delay"
 								}
 
@@ -1080,7 +1079,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-23", 0 ],
-									"source" : [ "obj-2", 0 ]
+									"source" : [ "obj-2", 1 ]
 								}
 
 							}
@@ -2256,7 +2255,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 115.75, 206.0, 58.75, 33.0 ],
-									"text" : "^#deaths\n(asian)"
+									"text" : "^#deaths\n(black)"
 								}
 
 							}
@@ -2268,7 +2267,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 228.5, 182.0, 61.0, 33.0 ],
-									"text" : "<#cases\n(asian)"
+									"text" : "<#cases\n(black)"
 								}
 
 							}
@@ -2509,7 +2508,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p asian"
+					"text" : "p black"
 				}
 
 			}
