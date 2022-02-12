@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 458.0, 230.0, 410.0, 631.0 ],
+		"rect" : [ 534.0, 248.0, 410.0, 631.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -185,7 +185,7 @@
 								"box" : 								{
 									"data" : 									{
 										"http_method" : "get",
-										"url" : "https://iiviiiii-2020-weathering.herokuapp.com/data?var1=missouri&var2=2",
+										"url" : "https://iiviiiii-2020-weathering.herokuapp.com/data?var1=iowa&var2=1",
 										"response_dict" : "data1",
 										"parse_type" : "json"
 									}
@@ -337,7 +337,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 148.0, 102.0, 49.0, 22.0 ],
+					"patching_rect" : [ 153.0, 102.0, 49.0, 22.0 ],
 					"text" : "r where"
 				}
 
@@ -361,8 +361,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 99.5, 102.0, 45.0, 22.0 ],
-					"text" : "r begin"
+					"patching_rect" : [ 99.5, 102.0, 52.0, 22.0 ],
+					"text" : "r begin1"
 				}
 
 			}
@@ -946,8 +946,8 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 114.166666666666686, 127.0, 47.0, 22.0 ],
-									"text" : "s begin"
+									"patching_rect" : [ 107.166666666666686, 127.0, 54.0, 22.0 ],
+									"text" : "s begin1"
 								}
 
 							}

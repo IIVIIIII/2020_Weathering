@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 155.0, 410.0, 631.0 ],
+		"rect" : [ 34.0, 251.0, 410.0, 631.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -185,7 +185,7 @@
 								"box" : 								{
 									"data" : 									{
 										"http_method" : "get",
-										"url" : "https://iiviiiii-2020-weathering.herokuapp.com/data?var1=missouri&var2=2",
+										"url" : "https://iiviiiii-2020-weathering.herokuapp.com/data?var1=iowa&var2=1",
 										"response_dict" : "data1",
 										"parse_type" : "json"
 									}
@@ -337,7 +337,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 148.0, 102.0, 49.0, 22.0 ],
+					"patching_rect" : [ 153.5, 102.0, 49.0, 22.0 ],
 					"text" : "r where"
 				}
 
@@ -361,8 +361,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 99.5, 102.0, 45.0, 22.0 ],
-					"text" : "r begin"
+					"patching_rect" : [ 99.5, 102.0, 52.0, 22.0 ],
+					"text" : "r begin2"
 				}
 
 			}
@@ -395,7 +395,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 204.0, 199.0, 432.0, 556.0 ],
+						"rect" : [ 359.0, 199.0, 432.0, 556.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -476,7 +476,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 124.666666666666686, 185.0, 45.0, 22.0 ],
+									"patching_rect" : [ 111.833333333333357, 185.0, 45.0, 22.0 ],
 									"text" : "s mute"
 								}
 
@@ -488,7 +488,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 75.666666666666686, 159.0, 98.0, 22.0 ],
+									"patching_rect" : [ 62.833333333333357, 159.0, 98.0, 22.0 ],
 									"text" : "route delay mute"
 								}
 
@@ -535,7 +535,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 75.666666666666686, 185.0, 47.0, 22.0 ],
+									"patching_rect" : [ 62.833333333333357, 185.0, 47.0, 22.0 ],
 									"text" : "s delay"
 								}
 
@@ -946,8 +946,8 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 114.166666666666686, 127.0, 47.0, 22.0 ],
-									"text" : "s begin"
+									"patching_rect" : [ 106.833333333333371, 127.0, 54.0, 22.0 ],
+									"text" : "s begin2"
 								}
 
 							}
@@ -1079,7 +1079,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-23", 0 ],
-									"source" : [ "obj-2", 3 ]
+									"source" : [ "obj-2", 2 ]
 								}
 
 							}
@@ -1278,7 +1278,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 183.0, 140.0, 111.0, 33.0 ],
+					"patching_rect" : [ 183.0, 140.0, 108.0, 33.0 ],
 					"text" : "<select which note to start from"
 				}
 
@@ -1326,7 +1326,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 97.166666666666671, 456.5, 207.666666666666686, 22.0 ],
-					"text" : "bang"
+					"text" : "51 0"
 				}
 
 			}
