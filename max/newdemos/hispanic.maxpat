@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 251.0, 410.0, 631.0 ],
+		"rect" : [ 586.0, 129.0, 410.0, 593.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,42 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 295.5, 291.0, 43.0, 22.0 ],
+					"text" : "r reset"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-19",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"patching_rect" : [ 247.5, 102.0, 29.5, 22.0 ],
+					"text" : "-1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 247.5, 78.0, 43.0, 22.0 ],
+					"text" : "r reset"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-5",
 					"maxclass" : "newobj",
@@ -185,7 +221,7 @@
 								"box" : 								{
 									"data" : 									{
 										"http_method" : "get",
-										"url" : "https://iiviiiii-2020-weathering.herokuapp.com/data?var1=iowa&var2=1",
+										"url" : "https://iiviiiii-2020-weathering.herokuapp.com/data?var1=missouri&var2=5",
 										"response_dict" : "data1",
 										"parse_type" : "json"
 									}
@@ -339,18 +375,6 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 153.5, 102.0, 49.0, 22.0 ],
 					"text" : "r where"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-2",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 295.5, 291.0, 43.0, 22.0 ],
-					"text" : "r reset"
 				}
 
 			}
@@ -1236,7 +1260,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 263.833333333333371, 57.0, 41.0, 22.0 ],
+					"patching_rect" : [ 204.5, 102.0, 41.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1278,7 +1302,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 183.0, 140.0, 108.0, 33.0 ],
+					"patching_rect" : [ 183.0, 140.0, 99.0, 33.0 ],
 					"text" : "<select which note to start from"
 				}
 
@@ -1326,7 +1350,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 97.166666666666671, 456.5, 207.666666666666686, 22.0 ],
-					"text" : "51 0"
+					"text" : "bang"
 				}
 
 			}
@@ -1349,8 +1373,8 @@
 					"numinlets" : 4,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 97.166666666666671, 375.0, 175.0, 22.0 ],
-					"text" : "route delay demoNotes stream"
+					"patching_rect" : [ 97.166666666666671, 375.0, 173.0, 22.0 ],
+					"text" : "route delay stream demoNotes"
 				}
 
 			}
@@ -2669,7 +2693,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-80", 1 ],
-					"source" : [ "obj-65", 1 ]
+					"source" : [ "obj-65", 2 ]
 				}
 
 			}
@@ -2695,6 +2719,13 @@
 					"destination" : [ "obj-80", 0 ],
 					"order" : 1,
 					"source" : [ "obj-69", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-19", 0 ],
+					"source" : [ "obj-7", 0 ]
 				}
 
 			}
