@@ -103,7 +103,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 1109.0, 182.0, 432.0, 556.0 ],
+						"rect" : [ 831.0, 219.0, 432.0, 556.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -131,7 +131,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-10",
@@ -280,7 +279,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 271.666666666666742, 392.0, 29.5, 22.0 ],
-									"text" : "51"
+									"text" : "48"
 								}
 
 							}
@@ -1487,7 +1486,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 82.0, 206.0, 475.0, 336.0 ],
+						"rect" : [ 512.0, 504.0, 475.0, 336.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1515,7 +1514,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-17",
