@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 269.0, 237.0, 410.0, 631.0 ],
+		"rect" : [ 146.0, 199.0, 410.0, 631.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -944,7 +944,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 280.5, 57.0, 41.0, 22.0 ],
+					"patching_rect" : [ 248.833333333333371, 57.0, 41.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1021,7 +1021,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 241.0, 331.0, 363.0, 365.0 ],
+						"rect" : [ 95.0, 241.0, 392.0, 365.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1057,8 +1057,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 89.5, 111.0, 106.0, 62.0 ],
-									"text" : "sprintf set url http://127.0.0.1:5000/data?var1=%s&var2=0"
+									"patching_rect" : [ 87.5, 111.0, 134.0, 62.0 ],
+									"text" : "sprintf set url https://iiviiiii-2020-weathering.herokuapp.com/data?var1=%s&var2=0"
 								}
 
 							}
@@ -1068,7 +1068,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 83.0, 42.0, 90.0, 20.0 ],
+									"patching_rect" : [ 81.0, 42.0, 90.0, 20.0 ],
 									"text" : "<selected state"
 								}
 
@@ -1081,7 +1081,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 51.0, 292.0, 30.0, 30.0 ]
+									"patching_rect" : [ 49.0, 292.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -1094,20 +1094,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 51.0, 37.0, 30.0, 30.0 ]
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-88",
-									"linecount" : 4,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 89.5, 111.0, 106.0, 62.0 ],
-									"text" : "sprintf set url http://127.0.0.1:5000/data?var1=%s&var2=1"
+									"patching_rect" : [ 49.0, 37.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -1118,7 +1105,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 201.5, 104.25, 116.0, 60.0 ],
+									"patching_rect" : [ 234.5, 104.25, 116.0, 60.0 ],
 									"text" : "hit api to run infection model and return data points for selected state"
 								}
 
@@ -1130,7 +1117,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 51.0, 233.0, 105.0, 22.0 ],
+									"patching_rect" : [ 49.0, 233.0, 105.0, 22.0 ],
 									"text" : "dict.unpack body :"
 								}
 
@@ -1143,7 +1130,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 51.0, 111.0, 24.0, 24.0 ]
+									"patching_rect" : [ 49.0, 111.0, 24.0, 24.0 ]
 								}
 
 							}
@@ -1154,7 +1141,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "dictionary", "" ],
-									"patching_rect" : [ 51.0, 209.0, 45.0, 22.0 ],
+									"patching_rect" : [ 49.0, 209.0, 45.0, 22.0 ],
 									"text" : "maxurl"
 								}
 
@@ -1175,7 +1162,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 4,
 									"outlettype" : [ "dictionary", "", "", "" ],
-									"patching_rect" : [ 51.0, 184.0, 117.0, 23.0 ],
+									"patching_rect" : [ 49.0, 184.0, 117.0, 23.0 ],
 									"saved_object_attributes" : 									{
 										"embed" : 1,
 										"parameter_enable" : 0,
@@ -1198,7 +1185,7 @@
 									"mode" : 0,
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 41.5, 104.25, 276.0, 158.75 ],
+									"patching_rect" : [ 39.5, 104.25, 311.0, 158.75 ],
 									"proportion" : 0.5,
 									"rounded" : 20
 								}
@@ -1221,16 +1208,16 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-30", 0 ],
-									"order" : 1,
+									"destination" : [ "obj-1", 0 ],
+									"order" : 0,
 									"source" : [ "obj-3", 0 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-88", 0 ],
-									"order" : 0,
+									"destination" : [ "obj-30", 0 ],
+									"order" : 1,
 									"source" : [ "obj-3", 0 ]
 								}
 
