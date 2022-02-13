@@ -8,24 +8,17 @@ def home():
     return "Lets goooo!!!"
 
 
-# @app.route("/<var1>/<var2>")
-# def jsonified(var):
-#     data = data4app.get_data(var)
-#     return jsonify(data)
-
-# @app.route("/var1/var2/", methods=['GET'])
-# def jsonified():
-#     var1 = request.args.get('var1', None)
-#     var2 = request.args.get('var1', None)
-    # data = data4app.get_data(var1)
-    # return jsonify(data)
-
-@app.route('/data', methods=['get'])
-def create_cm():
-    var1 = request.args.get('var1', None)
-    var2 = request.args.get('var2', None)
-    data = data4app.get_data(var1, var2)
+@app.route("/<var1>")
+def jsonified(var):
+    data = data4app.get_data(var)
     return jsonify(data)
+
+# @app.route('/data', methods=['get'])
+# def create_cm():
+#     var1 = request.args.get('var1', None)
+#     var2 = request.args.get('var2', None)
+#     data = data4app.get_data(var1, var2)
+#     return jsonify(data)
 
 
 if __name__ == "__main__":
