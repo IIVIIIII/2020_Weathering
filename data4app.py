@@ -257,3 +257,5 @@ def get_data(here):
         demogs[i] = dict(map(each_demo, timings, [i]*len(timings)))
 
     return demogs
+
+get_data('Missouri')
