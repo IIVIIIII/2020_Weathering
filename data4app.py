@@ -3,7 +3,7 @@ import random
 import json
 
 
-def get_data(here):
+def get_data(here, them, seed):
 
     # select desired state convert state and convert to proper format
     state = here.replace(" ", "").lower()
@@ -24,6 +24,8 @@ def get_data(here):
         deathProbs.append(stateData[state][data]['chance_of_death'])
         streamProbs.append(stateData[state][data]['inverted_ccvi'])
 
+    # seed for random values
+    random.seed(seed)
     # weighted probabilities for the number new infections caused by current case
     # (from left to right, values refer to weights for 0, 1, 2, and 3 new infections)
     spreadProbs = [0,0,0,12]
@@ -256,6 +258,4 @@ def get_data(here):
     for i in range(6):
         demogs[i] = dict(map(each_demo, timings, [i]*len(timings)))
 
-    return demogs
-
-get_data('Missouri')
+    return demogs[int(them)]
