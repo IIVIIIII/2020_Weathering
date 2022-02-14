@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 79.0, 410.0, 597.0 ],
+		"rect" : [ 46.0, 129.0, 410.0, 597.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -26,7 +26,7 @@
 		"toptoolbarpinned" : 0,
 		"righttoolbarpinned" : 0,
 		"bottomtoolbarpinned" : 0,
-		"toolbars_unpinned_last_save" : 0,
+		"toolbars_unpinned_last_save" : 2,
 		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
 		"enablehscroll" : 1,
@@ -1033,7 +1033,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 95.0, 241.0, 392.0, 365.0 ],
+						"rect" : [ 178.0, 247.0, 392.0, 363.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1063,25 +1063,26 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
-									"id" : "obj-1",
+									"id" : "obj-17",
 									"linecount" : 4,
 									"maxclass" : "newobj",
-									"numinlets" : 1,
+									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 87.5, 111.0, 134.0, 62.0 ],
-									"text" : "sprintf set url https://iiviiiii-2020-weathering.herokuapp.com/data?var1=%s&var2=0"
+									"patching_rect" : [ 66.0, 122.0, 152.0, 62.0 ],
+									"text" : "sprintf set url https://iiviiiii-2020-weathering.herokuapp.com/data?var1=%s&var2=0&var3=%s"
 								}
 
 							}
 , 							{
 								"box" : 								{
 									"id" : "obj-10",
+									"linecount" : 2,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 81.0, 42.0, 90.0, 20.0 ],
-									"text" : "<selected state"
+									"patching_rect" : [ 83.0, 29.0, 90.0, 33.0 ],
+									"text" : "<selected state and seed"
 								}
 
 							}
@@ -1093,7 +1094,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 49.0, 292.0, 30.0, 30.0 ]
+									"patching_rect" : [ 51.0, 303.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -1106,7 +1107,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 49.0, 37.0, 30.0, 30.0 ]
+									"patching_rect" : [ 51.0, 29.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -1117,7 +1118,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 234.5, 104.25, 116.0, 60.0 ],
+									"patching_rect" : [ 236.5, 115.25, 116.0, 60.0 ],
 									"text" : "hit api to run infection model and return data points for selected state"
 								}
 
@@ -1129,20 +1130,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 49.0, 233.0, 105.0, 22.0 ],
+									"patching_rect" : [ 51.0, 244.0, 105.0, 22.0 ],
 									"text" : "dict.unpack body :"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-30",
-									"maxclass" : "button",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "bang" ],
-									"parameter_enable" : 0,
-									"patching_rect" : [ 49.0, 111.0, 24.0, 24.0 ]
 								}
 
 							}
@@ -1153,7 +1142,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "dictionary", "" ],
-									"patching_rect" : [ 49.0, 209.0, 45.0, 22.0 ],
+									"patching_rect" : [ 51.0, 220.0, 45.0, 22.0 ],
 									"text" : "maxurl"
 								}
 
@@ -1162,7 +1151,7 @@
 								"box" : 								{
 									"data" : 									{
 										"http_method" : "get",
-										"url" : "https://iiviiiii-2020-weathering.herokuapp.com/data?var1=missouri&var2=1",
+										"url" : "https://iiviiiii-2020-weathering.herokuapp.com/data?var1=california&var2=4&var3=190285075",
 										"response_dict" : "data1",
 										"parse_type" : "json"
 									}
@@ -1174,7 +1163,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 4,
 									"outlettype" : [ "dictionary", "", "", "" ],
-									"patching_rect" : [ 49.0, 184.0, 117.0, 23.0 ],
+									"patching_rect" : [ 51.0, 195.0, 117.0, 23.0 ],
 									"saved_object_attributes" : 									{
 										"embed" : 1,
 										"parameter_enable" : 0,
@@ -1187,17 +1176,29 @@
 							}
 , 							{
 								"box" : 								{
+									"id" : "obj-16",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "bang", "" ],
+									"patching_rect" : [ 51.0, 84.0, 34.0, 22.0 ],
+									"text" : "t b l"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"angle" : 270.0,
 									"background" : 1,
 									"bgcolor" : [ 0.8, 0.8, 0.8, 0.0 ],
 									"border" : 1,
 									"bordercolor" : [ 0.482352941176471, 0.482352941176471, 0.482352941176471, 1.0 ],
-									"id" : "obj-9",
+									"id" : "obj-18",
 									"maxclass" : "panel",
 									"mode" : 0,
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 39.5, 104.25, 311.0, 158.75 ],
+									"patching_rect" : [ 41.5, 115.25, 311.0, 158.75 ],
 									"proportion" : 0.5,
 									"rounded" : 20
 								}
@@ -1206,8 +1207,22 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
+									"destination" : [ "obj-17", 0 ],
+									"source" : [ "obj-16", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-35", 0 ],
-									"source" : [ "obj-1", 0 ]
+									"source" : [ "obj-16", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-35", 0 ],
+									"source" : [ "obj-17", 0 ]
 								}
 
 							}
@@ -1220,24 +1235,8 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-1", 0 ],
-									"order" : 0,
+									"destination" : [ "obj-16", 0 ],
 									"source" : [ "obj-3", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-30", 0 ],
-									"order" : 1,
-									"source" : [ "obj-3", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-35", 0 ],
-									"source" : [ "obj-30", 0 ]
 								}
 
 							}
