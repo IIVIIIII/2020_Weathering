@@ -1094,7 +1094,7 @@
 								"box" : 								{
 									"data" : 									{
 										"http_method" : "get",
-										"url" : "https://iiviiiii-2020-weathering.herokuapp.com/data?var1=california&var2=4&var3=190285075",
+										"url" : "https://iiviiiii-2020-weathering.herokuapp.com/data?var1=california&var2=5&var3=558721279",
 										"response_dict" : "data1",
 										"parse_type" : "json"
 									}
@@ -2383,7 +2383,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 183.0, 140.0, 111.0, 33.0 ],
+					"patching_rect" : [ 183.0, 140.0, 99.0, 33.0 ],
 					"text" : "<select which note to start from"
 				}
 
