@@ -7341,6 +7341,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-40",
@@ -8568,7 +8569,7 @@
 								"box" : 								{
 									"data" : 									{
 										"http_method" : "get",
-										"url" : "https://iiviiiii-2020-weathering.herokuapp.com/data?var1=missouri&var2=0&var3=46670632",
+										"url" : "https://iiviiiii-2020-weathering.herokuapp.com/data?var1=missouri&var2=0&var3=124746179",
 										"response_dict" : "data1",
 										"parse_type" : "json"
 									}
@@ -8754,7 +8755,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 97.166666666666671, 456.5, 207.666666666666686, 22.0 ],
-					"text" : "53 0"
+					"text" : "bang"
 				}
 
 			}
