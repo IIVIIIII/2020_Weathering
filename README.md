@@ -12,4 +12,4 @@ Project is still under development but the result of the sonification algorhthm 
 Use headphones or some other setup that will achieve a perceptible stereo field.
 
 ### User interface with final distribution example:
-![alt text](https://github.com/IIVIIIII/TCB_Streamlining/blob/main/resources/images/ui.jpg?raw=true)
+![alt text](https://github.com/IIVIIIII/2020_Weathering/blob/main/resources/images/ui.jpg?raw=true)
