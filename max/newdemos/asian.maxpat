@@ -8838,7 +8838,7 @@
 								"box" : 								{
 									"data" : 									{
 										"http_method" : "get",
-										"url" : "https://iiviiiii-2020-weathering.herokuapp.com/data?var1=missouri&var2=4&var3=697076111",
+										"url" : "https://iiviiiii-2020-weathering.herokuapp.com/data?var1=tennessee&var2=4&var3=211730404",
 										"response_dict" : "data1",
 										"parse_type" : "json"
 									}
