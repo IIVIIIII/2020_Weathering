@@ -55,7 +55,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 34.0, 186.0, 707.0, 705.0 ],
+						"rect" : [ 207.0, 192.0, 707.0, 705.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -84,6 +84,18 @@
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-1",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 249.0, 203.0, 58.0, 22.0 ],
+									"text" : "loadbang"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-44",
 									"maxclass" : "newobj",
@@ -130,6 +142,19 @@
 										"subpatcher_template" : "",
 										"assistshowspatchername" : 0,
 										"boxes" : [ 											{
+												"box" : 												{
+													"id" : "obj-14",
+													"linecount" : 2,
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 111.549999999999983, 21.0, 275.0, 35.0 ],
+													"text" : "loadmess read \"Macintosh HD:/Users/kelvinwalls/Desktop/2020Wvids/5.mov\""
+												}
+
+											}
+, 											{
 												"box" : 												{
 													"id" : "obj-2",
 													"maxclass" : "newobj",
@@ -232,8 +257,8 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "jit_matrix", "" ],
-													"patching_rect" : [ 54.0, 101.0, 192.0, 22.0 ],
-													"text" : "jit.movie @moviefile 5.mov @vol 0"
+													"patching_rect" : [ 54.0, 101.0, 93.0, 22.0 ],
+													"text" : "jit.movie @vol 0"
 												}
 
 											}
@@ -251,6 +276,13 @@
 											}
  ],
 										"lines" : [ 											{
+												"patchline" : 												{
+													"destination" : [ "obj-39", 0 ],
+													"source" : [ "obj-14", 0 ]
+												}
+
+											}
+, 											{
 												"patchline" : 												{
 													"destination" : [ "obj-20", 0 ],
 													"source" : [ "obj-16", 0 ]
@@ -396,6 +428,19 @@
 										"assistshowspatchername" : 0,
 										"boxes" : [ 											{
 												"box" : 												{
+													"id" : "obj-14",
+													"linecount" : 2,
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 111.549999999999983, 21.0, 275.0, 35.0 ],
+													"text" : "loadmess read \"Macintosh HD:/Users/kelvinwalls/Desktop/2020Wvids/4.mov\""
+												}
+
+											}
+, 											{
+												"box" : 												{
 													"id" : "obj-2",
 													"maxclass" : "newobj",
 													"numinlets" : 0,
@@ -497,8 +542,8 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "jit_matrix", "" ],
-													"patching_rect" : [ 54.0, 97.0, 192.0, 22.0 ],
-													"text" : "jit.movie @moviefile 4.mov @vol 0"
+													"patching_rect" : [ 54.0, 97.0, 93.0, 22.0 ],
+													"text" : "jit.movie @vol 0"
 												}
 
 											}
@@ -516,6 +561,13 @@
 											}
  ],
 										"lines" : [ 											{
+												"patchline" : 												{
+													"destination" : [ "obj-39", 0 ],
+													"source" : [ "obj-14", 0 ]
+												}
+
+											}
+, 											{
 												"patchline" : 												{
 													"destination" : [ "obj-20", 0 ],
 													"source" : [ "obj-16", 0 ]
@@ -661,6 +713,19 @@
 										"assistshowspatchername" : 0,
 										"boxes" : [ 											{
 												"box" : 												{
+													"id" : "obj-14",
+													"linecount" : 3,
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 111.549999999999983, 21.0, 270.300000000000011, 49.0 ],
+													"text" : "loadmess read \"Macintosh HD:/Users/kelvinwalls/Desktop/2020Wvids/3.mov\""
+												}
+
+											}
+, 											{
+												"box" : 												{
 													"id" : "obj-2",
 													"maxclass" : "newobj",
 													"numinlets" : 0,
@@ -762,8 +827,8 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "jit_matrix", "" ],
-													"patching_rect" : [ 54.0, 101.0, 192.0, 22.0 ],
-													"text" : "jit.movie @moviefile 3.mov @vol 0"
+													"patching_rect" : [ 54.0, 101.0, 93.0, 22.0 ],
+													"text" : "jit.movie @vol 0"
 												}
 
 											}
@@ -781,6 +846,13 @@
 											}
  ],
 										"lines" : [ 											{
+												"patchline" : 												{
+													"destination" : [ "obj-39", 0 ],
+													"source" : [ "obj-14", 0 ]
+												}
+
+											}
+, 											{
 												"patchline" : 												{
 													"destination" : [ "obj-20", 0 ],
 													"source" : [ "obj-16", 0 ]
@@ -926,6 +998,19 @@
 										"assistshowspatchername" : 0,
 										"boxes" : [ 											{
 												"box" : 												{
+													"id" : "obj-14",
+													"linecount" : 3,
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 111.549999999999983, 21.0, 270.300000000000011, 49.0 ],
+													"text" : "loadmess read \"Macintosh HD:/Users/kelvinwalls/Desktop/2020Wvids/2.mov\""
+												}
+
+											}
+, 											{
+												"box" : 												{
 													"id" : "obj-2",
 													"maxclass" : "newobj",
 													"numinlets" : 0,
@@ -1027,8 +1112,8 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "jit_matrix", "" ],
-													"patching_rect" : [ 54.0, 101.0, 192.0, 22.0 ],
-													"text" : "jit.movie @moviefile 2.mov @vol 0"
+													"patching_rect" : [ 54.0, 101.0, 93.0, 22.0 ],
+													"text" : "jit.movie @vol 0"
 												}
 
 											}
@@ -1046,6 +1131,13 @@
 											}
  ],
 										"lines" : [ 											{
+												"patchline" : 												{
+													"destination" : [ "obj-39", 0 ],
+													"source" : [ "obj-14", 0 ]
+												}
+
+											}
+, 											{
 												"patchline" : 												{
 													"destination" : [ "obj-20", 0 ],
 													"source" : [ "obj-16", 0 ]
@@ -1281,7 +1373,7 @@
 										}
 ,
 										"classnamespace" : "box",
-										"rect" : [ 237.0, 352.0, 479.0, 369.0 ],
+										"rect" : [ 437.0, 209.0, 479.0, 369.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -1310,6 +1402,19 @@
 										"subpatcher_template" : "",
 										"assistshowspatchername" : 0,
 										"boxes" : [ 											{
+												"box" : 												{
+													"id" : "obj-14",
+													"linecount" : 2,
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 138.699999999999989, 45.0, 275.0, 35.0 ],
+													"text" : "loadmess read \"Macintosh HD:/Users/kelvinwalls/Desktop/2020Wvids/1.mov\""
+												}
+
+											}
+, 											{
 												"box" : 												{
 													"id" : "obj-2",
 													"maxclass" : "newobj",
@@ -1412,8 +1517,8 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "jit_matrix", "" ],
-													"patching_rect" : [ 54.0, 101.0, 192.0, 22.0 ],
-													"text" : "jit.movie @moviefile 1.mov @vol 0"
+													"patching_rect" : [ 54.0, 101.0, 93.0, 22.0 ],
+													"text" : "jit.movie @vol 0"
 												}
 
 											}
@@ -1431,6 +1536,13 @@
 											}
  ],
 										"lines" : [ 											{
+												"patchline" : 												{
+													"destination" : [ "obj-39", 0 ],
+													"source" : [ "obj-14", 0 ]
+												}
+
+											}
+, 											{
 												"patchline" : 												{
 													"destination" : [ "obj-20", 0 ],
 													"source" : [ "obj-16", 0 ]
@@ -1546,7 +1658,7 @@
 										}
 ,
 										"classnamespace" : "box",
-										"rect" : [ 95.0, 277.0, 468.0, 576.0 ],
+										"rect" : [ 415.0, 264.0, 468.0, 576.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -1575,6 +1687,32 @@
 										"subpatcher_template" : "",
 										"assistshowspatchername" : 0,
 										"boxes" : [ 											{
+												"box" : 												{
+													"id" : "obj-14",
+													"linecount" : 2,
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 138.0, 66.0, 275.0, 35.0 ],
+													"text" : "loadmess read \"Macintosh HD:/Users/kelvinwalls/Desktop/2020Wvids/0.mov\""
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-9",
+													"linecount" : 5,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 326.0, 109.0, 79.0, 76.0 ],
+													"text" : "\"Macintosh HD:/Users/kelvinwalls/Desktop/2020Wvids\""
+												}
+
+											}
+, 											{
 												"box" : 												{
 													"id" : "obj-20",
 													"maxclass" : "message",
@@ -1605,8 +1743,8 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "jit_matrix", "" ],
-													"patching_rect" : [ 52.0, 123.0, 192.0, 22.0 ],
-													"text" : "jit.movie @moviefile 0.mov @vol 0"
+													"patching_rect" : [ 52.0, 123.0, 93.0, 22.0 ],
+													"text" : "jit.movie @vol 0"
 												}
 
 											}
@@ -1761,6 +1899,13 @@
 												"patchline" : 												{
 													"destination" : [ "obj-46", 0 ],
 													"source" : [ "obj-10", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-18", 0 ],
+													"source" : [ "obj-14", 0 ]
 												}
 
 											}
@@ -6713,6 +6858,13 @@
 							}
  ],
 						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-4", 0 ],
+									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
 								"patchline" : 								{
 									"destination" : [ "obj-8", 0 ],
 									"source" : [ "obj-10", 0 ]

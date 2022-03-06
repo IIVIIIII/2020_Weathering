@@ -149,8 +149,8 @@
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 111.549999999999983, 21.0, 275.0, 35.0 ],
-													"text" : "loadmess read \"Macintosh HD:/Users/kelvinwalls/Desktop/2020Wvids/5.mov\""
+													"patching_rect" : [ 111.549999999999983, 21.0, 260.0, 35.0 ],
+													"text" : "loadmess read \"Macintosh HD:/Users/kelwalls/Desktop/2020Wvids/5.mov\""
 												}
 
 											}
@@ -434,8 +434,8 @@
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 111.549999999999983, 21.0, 275.0, 35.0 ],
-													"text" : "loadmess read \"Macintosh HD:/Users/kelvinwalls/Desktop/2020Wvids/4.mov\""
+													"patching_rect" : [ 111.549999999999983, 21.0, 260.0, 35.0 ],
+													"text" : "loadmess read \"Macintosh HD:/Users/kelwalls/Desktop/2020Wvids/4.mov\""
 												}
 
 											}
@@ -714,13 +714,13 @@
 										"boxes" : [ 											{
 												"box" : 												{
 													"id" : "obj-14",
-													"linecount" : 3,
+													"linecount" : 2,
 													"maxclass" : "newobj",
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 111.549999999999983, 21.0, 270.300000000000011, 49.0 ],
-													"text" : "loadmess read \"Macintosh HD:/Users/kelvinwalls/Desktop/2020Wvids/3.mov\""
+													"patching_rect" : [ 111.549999999999983, 21.0, 260.0, 35.0 ],
+													"text" : "loadmess read \"Macintosh HD:/Users/kelwalls/Desktop/2020Wvids/3.mov\""
 												}
 
 											}
@@ -999,13 +999,13 @@
 										"boxes" : [ 											{
 												"box" : 												{
 													"id" : "obj-14",
-													"linecount" : 3,
+													"linecount" : 2,
 													"maxclass" : "newobj",
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 111.549999999999983, 21.0, 270.300000000000011, 49.0 ],
-													"text" : "loadmess read \"Macintosh HD:/Users/kelvinwalls/Desktop/2020Wvids/2.mov\""
+													"patching_rect" : [ 111.549999999999983, 21.0, 260.0, 35.0 ],
+													"text" : "loadmess read \"Macintosh HD:/Users/kelwalls/Desktop/2020Wvids/2.mov\""
 												}
 
 											}
@@ -1409,8 +1409,8 @@
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 138.699999999999989, 45.0, 275.0, 35.0 ],
-													"text" : "loadmess read \"Macintosh HD:/Users/kelvinwalls/Desktop/2020Wvids/1.mov\""
+													"patching_rect" : [ 138.699999999999989, 45.0, 260.0, 35.0 ],
+													"text" : "loadmess read \"Macintosh HD:/Users/kelwalls/Desktop/2020Wvids/1.mov\""
 												}
 
 											}
@@ -1694,8 +1694,8 @@
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 138.0, 66.0, 275.0, 35.0 ],
-													"text" : "loadmess read \"Macintosh HD:/Users/kelvinwalls/Desktop/2020Wvids/0.mov\""
+													"patching_rect" : [ 138.0, 66.0, 260.0, 35.0 ],
+													"text" : "loadmess read \"Macintosh HD:/Users/kelwalls/Desktop/2020Wvids/0.mov\""
 												}
 
 											}
@@ -10435,42 +10435,42 @@
 		"dependency_cache" : [ 			{
 				"name" : "DLSMusicDevice_20211102_4.maxsnap",
 				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../../../../../../Documents/Max 8/Snapshots",
+				"patcherrelativepath" : "../../../../../../../Documents/Max 8/Snapshots",
 				"type" : "mx@s",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "DLSMusicDevice.maxsnap",
 				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../../../../../../Documents/Max 8/Snapshots",
+				"patcherrelativepath" : "../../../../../../../Documents/Max 8/Snapshots",
 				"type" : "mx@s",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "DLSMusicDevice_20211102.maxsnap",
 				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../../../../../../Documents/Max 8/Snapshots",
+				"patcherrelativepath" : "../../../../../../../Documents/Max 8/Snapshots",
 				"type" : "mx@s",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "DLSMusicDevice_20211102_1.maxsnap",
 				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../../../../../../Documents/Max 8/Snapshots",
+				"patcherrelativepath" : "../../../../../../../Documents/Max 8/Snapshots",
 				"type" : "mx@s",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "DLSMusicDevice_20211102_2.maxsnap",
 				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../../../../../../Documents/Max 8/Snapshots",
+				"patcherrelativepath" : "../../../../../../../Documents/Max 8/Snapshots",
 				"type" : "mx@s",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "DLSMusicDevice_20211102_3.maxsnap",
 				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../../../../../../Documents/Max 8/Snapshots",
+				"patcherrelativepath" : "../../../../../../../Documents/Max 8/Snapshots",
 				"type" : "mx@s",
 				"implicit" : 1
 			}
