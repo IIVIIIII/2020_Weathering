@@ -258,4 +258,14 @@ def get_data(here, them, seed):
     for i in range(6):
         demogs[i] = dict(map(each_demo, timings, [i]*len(timings)))
 
-    return demogs[int(them)]
+    # new dictionary to hold prefered structure of data
+    new_demogs = demogs[0]
+
+    # restructure data
+    for case in range(len(new_demogs)):
+        for demog in range(6):
+            new_demogs[case][demog] = demogs[demog][case]['demoNotes']
+        new_demogs[case].pop('demoNotes')
+    
+    # return restructured data
+    return new_demogs
